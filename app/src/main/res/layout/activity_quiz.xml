@@ -80,7 +80,7 @@
 
     <TextView
         android:id="@+id/notextview"
-        android:layout_width="102dp"
+        android:layout_width="50dp"
         android:layout_height="36dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/question"

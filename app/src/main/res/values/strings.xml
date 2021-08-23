@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MentalHealthApp</string>
+    <string name="done">DONE</string>
+    <string name="out_of_50">OUT OF 50</string>
+    <string name="_0">0</string>
+    <string name="score">Score</string>
 </resources>

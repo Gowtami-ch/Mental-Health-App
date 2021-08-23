@@ -23,21 +23,22 @@ public class QuizActivity extends AppCompatActivity {
     public int currQuestion=0;
     public int totalquestions=10;
     public ArrayList<Question> questions = new ArrayList<Question>();
-    Question que1 = new Question("Have you been upset because of something that happened unexpectedly?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
-    Question que2 = new Question("Have you felt that you were unable to control important things in your life?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
-    Question que3 = new Question("Have you felt nervous and 'stressed'?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
-    Question que4 = new Question("Have you felt confident about your ability to handle your personal problems?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
-    Question que5 = new Question("Have you felt that things were going your way?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
-    Question que6 = new Question("Have you found that you could NOT cope with all the things you had to do?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
-    Question que7 = new Question("Have you been able to control irritations in your life?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
-    Question que8 = new Question("Have you felt that you were on top of things?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
-    Question que9 = new Question("Have you been angered because of things that happened that were out of your control?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
-    Question que10 = new Question("Have you felt difficulties were piling up so high that you could not overcome them?","Never","Almost Never","Sometimes","Fairly Often", "Very Often");
+    Question que1 = new Question("In the last week, how often have you been upset because of something that happened unexpectedly?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", true);
+    Question que2 = new Question("In the last week, how often have you felt that you were unable to control important things in your life?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", true);
+    Question que3 = new Question("In the last week, how often have you felt nervous and 'stressed'?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", true);
+    Question que4 = new Question("In the last week, how often have you felt confident about your ability to handle your personal problems?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", false);
+    Question que5 = new Question("In the last week, how often have you felt that things were going your way?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", false);
+    Question que6 = new Question("In the last week, how often have you found that you could NOT cope with all the things you had to do?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", true);
+    Question que7 = new Question("In the last week, how often have you been able to control irritations in your life?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", false);
+    Question que8 = new Question("In the last week, how often have you felt that you were on top of things?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", false);
+    Question que9 = new Question("In the last week, how often have you been angered because of things that happened that were out of your control?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", true);
+    Question que10 = new Question("In the last week, how often have you felt difficulties were piling up so high that you could not overcome them?","Never","Almost Never","Sometimes","Fairly Often", "Very Often", true);
     RadioButton option1;
     RadioButton option2;
     RadioButton option3;
     RadioButton option4;
     RadioButton option5;
+    public static final String EXTRA_SCORE = "com.example.mentalhealthapp.extra.SCORE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,7 +86,7 @@ public class QuizActivity extends AppCompatActivity {
                 else
                 {
                     RadioButton radioButton = (RadioButton)radioGroup.findViewById(selectedId);
-                    updateScore(selectedId);
+                    updateScore(selectedId,questions.get(currQuestion));
                     currQuestion+=1;
                     if(currQuestion<totalquestions)
                     {
@@ -97,6 +98,7 @@ public class QuizActivity extends AppCompatActivity {
                     {
                         Toast.makeText(QuizActivity.this, "Your score is "+score, Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(QuizActivity.this,ScoreActivity.class);
+                        intent.putExtra(EXTRA_SCORE,Integer.toString(score));
                         startActivity(intent);
                     }
                 }
@@ -111,26 +113,48 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
     }
-    private  void updateScore(int selectedId)
+    private  void updateScore(int selectedId, Question que)
     {
-        switch (selectedId)
-        {
-            case R.id.option1:
-                score+=1;
-                break;
-            case R.id.option2:
-                score+=2;
-                break;
-            case R.id.option3:
-                score+=3;
-                break;
-            case R.id.option4:
-                score+=4;
-                break;
-            case R.id.option5:
-                score+=5;
-                break;
+        if(que.negque){
+            switch (selectedId)
+            {
+                case R.id.option1:
+                    score+=0;
+                    break;
+                case R.id.option2:
+                    score+=1;
+                    break;
+                case R.id.option3:
+                    score+=2;
+                    break;
+                case R.id.option4:
+                    score+=3;
+                    break;
+                case R.id.option5:
+                    score+=4;
+                    break;
+            }
+        }else{
+            switch (selectedId)
+            {
+                case R.id.option1:
+                    score+=4;
+                    break;
+                case R.id.option2:
+                    score+=3;
+                    break;
+                case R.id.option3:
+                    score+=2;
+                    break;
+                case R.id.option4:
+                    score+=1;
+                    break;
+                case R.id.option5:
+                    score+=0;
+                    break;
+            }
         }
+
     }
     private void updateTextview()
     {
