@@ -7,91 +7,107 @@
     android:background="#FFFFFF"
     tools:context=".ScoreActivity">
 
-    <TextView
-        android:id="@+id/tv1"
-        android:layout_width="429dp"
-        android:layout_height="73dp"
-        android:layout_gravity="center"
-        android:background="#55D394"
-        android:padding="8dp"
-        android:text="@string/stress_test"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TextContrastCheck" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="449dp"
-        android:layout_height="101dp"
-        android:layout_gravity="center"
-        android:background="#55D394"
-        android:padding="24dp"
-        android:text="@string/score"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="38sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127"
-        tools:ignore="TextContrastCheck" />
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="448dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:background="#55D394"
+            android:padding="0dp"
+            android:text="@string/stress_test"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/tv3"
-        android:layout_width="433dp"
-        android:layout_height="63dp"
-        android:layout_gravity="center"
-        android:background="#55D394"
-        android:text="@string/_0"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tv4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.681"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv2"
-        tools:ignore="TextContrastCheck" />
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="444dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center"
+            android:background="#55D394"
+            android:padding="0dp"
+            android:text="@string/score"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
 
-    <TextView
-        android:id="@+id/tv4"
-        android:layout_width="442dp"
-        android:layout_height="113dp"
-        android:layout_gravity="center"
-        android:background="#55D394"
-        android:padding="24dp"
-        android:text="@string/out_of_40"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv3"
-        tools:ignore="TextContrastCheck" />
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="448dp"
+            android:layout_height="61dp"
+            android:layout_gravity="center"
+            android:background="#55D394"
+            android:padding="0dp"
+            android:text="@string/_0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="458dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center"
+            android:background="#55D394"
+            android:padding="0dp"
+            android:text="@string/out_of_40"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/done"
         android:layout_width="104dp"
         android:layout_height="56dp"
-        android:background="#55D394"
+        android:background="@drawable/roundbutton"
         android:text="@string/done"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="355dp"
+        android:layout_height="275dp"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783"
+        app:srcCompat="@drawable/statusbar" />
+
+    <TextView
+        android:id="@+id/scoretext"
+        android:layout_width="101dp"
+        android:layout_height="57dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#F8F0F0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714" />
 </androidx.constraintlayout.widget.ConstraintLayout>
