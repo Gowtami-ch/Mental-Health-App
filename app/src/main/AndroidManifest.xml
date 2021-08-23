@@ -11,13 +11,24 @@
         android:theme="@style/Theme.MentalHealthApp">
         <activity
             android:name=".ToDoListActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="To-Do List"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".JournalActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Emotion Journal"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ScoreActivity"
+            android:exported="true"
+            android:label="Score"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QuizActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:label="Quiz"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
