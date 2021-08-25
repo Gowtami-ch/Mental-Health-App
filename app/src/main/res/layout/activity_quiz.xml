@@ -9,14 +9,15 @@
 
     <TextView
         android:id="@+id/question"
-        android:layout_width="338dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="372dp"
+        android:layout_height="131dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/bgquestion"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:background="@drawable/bgquestion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
