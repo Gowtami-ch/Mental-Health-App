@@ -61,7 +61,7 @@
             android:layout_gravity="center"
             android:background="#55D394"
             android:padding="0dp"
-            android:text="@string/out_of_40"
+            android:text="@string/out_of_60"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="30sp"
