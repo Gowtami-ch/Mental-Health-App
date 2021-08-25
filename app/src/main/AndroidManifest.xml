@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalHealthApp">
         <activity
+            android:name=".Writing"
+            android:exported="true" />
+        <activity
             android:name=".ToDoListActivity"
             android:exported="true"
             android:label="To-Do List"
