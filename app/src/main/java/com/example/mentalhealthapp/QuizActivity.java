@@ -333,7 +333,6 @@ public class QuizActivity extends AppCompatActivity {
             case 3:
             case 4:
             case 5:
-            case 6:
                 min = 48; max = 79;
                 random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
@@ -344,10 +343,10 @@ public class QuizActivity extends AppCompatActivity {
                 option4.setText(questions.get(random_int).option4);
                 option5.setText(questions.get(random_int).option5);
                 break;
+            case 6:
             case 7:
             case 8:
             case 9:
-            case 10:
                 min = 23; max = 47;
                 random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
@@ -357,9 +356,9 @@ public class QuizActivity extends AppCompatActivity {
                 option3.setText(questions.get(random_int).option3);
                 option4.setText(questions.get(random_int).option4);
                 option5.setText(questions.get(random_int).option5);
+            case 10:
             case 11:
             case 12:
-            case 13:
                 min = 11; max = 22;
                 random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
@@ -369,8 +368,8 @@ public class QuizActivity extends AppCompatActivity {
                 option3.setText(questions.get(random_int).option3);
                 option4.setText(questions.get(random_int).option4);
                 option5.setText(questions.get(random_int).option5);
+            case 13:
             case 14:
-            case 15:
                 min = 1; max = 10;
                 random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
