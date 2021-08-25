@@ -21,7 +21,7 @@ public class QuizActivity extends AppCompatActivity {
     private Button clear;
     public int score=0;
     public int currQuestion=0;
-    public int totalquestions=10;
+    public int totalquestions=15;
     public int min, max, random_int;
     public ArrayList<Question> questions = new ArrayList<Question>();
     // Category-1
@@ -141,8 +141,7 @@ public class QuizActivity extends AppCompatActivity {
         option4= (RadioButton)findViewById(R.id.option4);
         option5= (RadioButton)findViewById(R.id.option5);
         radioGroup.clearCheck();
-        min = 48; max = 79;
-        random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+
         questions.add(que1);
         questions.add(que2);
         questions.add(que3);
@@ -223,13 +222,16 @@ public class QuizActivity extends AppCompatActivity {
         questions.add(que78);
         questions.add(que79);
 
-        String Question= questions.get(0).question;
+        min = 48; max = 79;
+        random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+
+        String Question= questions.get(random_int).question;
         question.setText(Question);
-        option1.setText(questions.get(0).option1);
-        option2.setText(questions.get(0).option2);
-        option3.setText(questions.get(0).option3);
-        option4.setText(questions.get(0).option4);
-        option5.setText(questions.get(0).option5);
+        option1.setText(questions.get(random_int).option1);
+        option2.setText(questions.get(random_int).option2);
+        option3.setText(questions.get(random_int).option3);
+        option4.setText(questions.get(random_int).option4);
+        option5.setText(questions.get(random_int).option5);
         String QNo=currQuestion+1+"/"+totalquestions;
         notextview.setText(QNo);
         next.setOnClickListener(new View.OnClickListener()
@@ -326,95 +328,59 @@ public class QuizActivity extends AppCompatActivity {
         switch (currQuestion)
         {
             case 0:
-                Question= questions.get(0).question;
-                question.setText(Question);
-                option1.setText(questions.get(0).option1);
-                option2.setText(questions.get(0).option2);
-                option3.setText(questions.get(0).option3);
-                option4.setText(questions.get(0).option4);
-                option5.setText(questions.get(0).option5);
-                break;
             case 1:
-                Question= questions.get(1).question;
-                question.setText(Question);
-                option1.setText(questions.get(1).option1);
-                option2.setText(questions.get(1).option2);
-                option3.setText(questions.get(1).option3);
-                option4.setText(questions.get(1).option4);
-                option5.setText(questions.get(1).option5);
-                break;
             case 2:
-                Question= questions.get(2).question;
-                question.setText(Question);
-                option1.setText(questions.get(2).option1);
-                option2.setText(questions.get(2).option2);
-                option3.setText(questions.get(2).option3);
-                option4.setText(questions.get(2).option4);
-                option5.setText(questions.get(2).option5);
-                break;
             case 3:
-                Question= questions.get(3).question;
-                question.setText(Question);
-                option1.setText(questions.get(3).option1);
-                option2.setText(questions.get(3).option2);
-                option3.setText(questions.get(3).option3);
-                option4.setText(questions.get(3).option4);
-                option5.setText(questions.get(3).option5);
-                break;
             case 4:
-                Question= questions.get(4).question;
-                question.setText(Question);
-                option1.setText(questions.get(4).option1);
-                option2.setText(questions.get(4).option2);
-                option3.setText(questions.get(4).option3);
-                option4.setText(questions.get(4).option4);
-                option5.setText(questions.get(4).option5);
-                break;
             case 5:
-                Question= questions.get(5).question;
-                question.setText(Question);
-                option1.setText(questions.get(5).option1);
-                option2.setText(questions.get(5).option2);
-                option3.setText(questions.get(5).option3);
-                option4.setText(questions.get(5).option4);
-                option5.setText(questions.get(5).option5);
-                break;
             case 6:
-                Question= questions.get(6).question;
+                min = 48; max = 79;
+                random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+                Question= questions.get(random_int).question;
                 question.setText(Question);
-                option1.setText(questions.get(6).option1);
-                option2.setText(questions.get(6).option2);
-                option3.setText(questions.get(6).option3);
-                option4.setText(questions.get(6).option4);
-                option5.setText(questions.get(6).option5);
+                option1.setText(questions.get(random_int).option1);
+                option2.setText(questions.get(random_int).option2);
+                option3.setText(questions.get(random_int).option3);
+                option4.setText(questions.get(random_int).option4);
+                option5.setText(questions.get(random_int).option5);
                 break;
             case 7:
-                Question= questions.get(7).question;
-                question.setText(Question);
-                option1.setText(questions.get(7).option1);
-                option2.setText(questions.get(7).option2);
-                option3.setText(questions.get(7).option3);
-                option4.setText(questions.get(7).option4);
-                option5.setText(questions.get(7).option5);
-                break;
             case 8:
-                Question= questions.get(8).question;
-                question.setText(Question);
-                option1.setText(questions.get(8).option1);
-                option2.setText(questions.get(8).option2);
-                option3.setText(questions.get(8).option3);
-                option4.setText(questions.get(8).option4);
-                option5.setText(questions.get(8).option5);
-                break;
             case 9:
-                Question= questions.get(9).question;
+            case 10:
+                min = 23; max = 47;
+                random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+                Question= questions.get(random_int).question;
                 question.setText(Question);
-                option1.setText(questions.get(9).option1);
-                option2.setText(questions.get(9).option2);
-                option3.setText(questions.get(9).option3);
-                option4.setText(questions.get(9).option4);
-                option5.setText(questions.get(9).option5);
-                break;
+                option1.setText(questions.get(random_int).option1);
+                option2.setText(questions.get(random_int).option2);
+                option3.setText(questions.get(random_int).option3);
+                option4.setText(questions.get(random_int).option4);
+                option5.setText(questions.get(random_int).option5);
+            case 11:
+            case 12:
+            case 13:
+                min = 11; max = 22;
+                random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+                Question= questions.get(random_int).question;
+                question.setText(Question);
+                option1.setText(questions.get(random_int).option1);
+                option2.setText(questions.get(random_int).option2);
+                option3.setText(questions.get(random_int).option3);
+                option4.setText(questions.get(random_int).option4);
+                option5.setText(questions.get(random_int).option5);
+            case 14:
+            case 15:
+                min = 1; max = 10;
+                random_int = (int)Math.floor(Math.random()*(max-min+1)+min);
+                Question= questions.get(random_int).question;
+                question.setText(Question);
+                option1.setText(questions.get(random_int).option1);
+                option2.setText(questions.get(random_int).option2);
+                option3.setText(questions.get(random_int).option3);
+                option4.setText(questions.get(random_int).option4);
+                option5.setText(questions.get(random_int).option5);
+
         }
     }
 }
