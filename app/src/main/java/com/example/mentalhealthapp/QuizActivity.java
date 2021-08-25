@@ -356,6 +356,7 @@ public class QuizActivity extends AppCompatActivity {
                 option3.setText(questions.get(random_int).option3);
                 option4.setText(questions.get(random_int).option4);
                 option5.setText(questions.get(random_int).option5);
+                break;
             case 10:
             case 11:
             case 12:
@@ -368,6 +369,7 @@ public class QuizActivity extends AppCompatActivity {
                 option3.setText(questions.get(random_int).option3);
                 option4.setText(questions.get(random_int).option4);
                 option5.setText(questions.get(random_int).option5);
+                break;
             case 13:
             case 14:
                 min = 1; max = 10;
@@ -379,7 +381,7 @@ public class QuizActivity extends AppCompatActivity {
                 option3.setText(questions.get(random_int).option3);
                 option4.setText(questions.get(random_int).option4);
                 option5.setText(questions.get(random_int).option5);
-
+                break;
         }
     }
 }

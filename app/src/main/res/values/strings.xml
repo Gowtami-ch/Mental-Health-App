@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MentalHealthApp</string>
     <string name="done">DONE</string>
-    <string name="out_of_40">OUT OF 40</string>
+    <string name="out_of_60">OUT OF 60</string>
     <string name="_0">0</string>
     <string name="score">Score</string>
     <string name="stress_test">Stress Level Assessment Test</string>
