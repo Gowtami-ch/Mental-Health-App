@@ -5,26 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgapp"
+    android:textAlignment="center"
     tools:context=".QuizActivity">
 
     <TextView
         android:id="@+id/question"
         android:layout_width="372dp"
         android:layout_height="131dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/bgquestion"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/next"
-        android:layout_width="120dp"
-        android:layout_height="53dp"
+        android:layout_width="99dp"
+        android:layout_height="48dp"
         android:text="NEXT"
         app:backgroundTint="#CF9116"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,11 +40,10 @@
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/question">
 
         <RadioButton
             android:id="@+id/option1"
@@ -86,12 +87,12 @@
         android:id="@+id/notextview"
         android:layout_width="107dp"
         android:layout_height="46dp"
+        android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/question"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.722" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

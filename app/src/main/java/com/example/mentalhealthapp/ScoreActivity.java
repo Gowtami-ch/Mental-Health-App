@@ -25,10 +25,12 @@ public class ScoreActivity extends AppCompatActivity {
         String status="";
         int sc=Integer.parseInt(score);
         if(sc>=0&&sc<15)
-          status="Low";
+          status="Very Low";
         else if(sc>=15&&sc<25)
-           status="Moderate";
+           status="Low";
         else if(sc>=25&&sc<35)
+            status="Moderate";
+        else if(sc>=35&&sc<50)
             status="High";
         else
             status="Very High";
