@@ -14,20 +14,20 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.303" />
 
     <Button
         android:id="@+id/journal"
         android:layout_width="125dp"
         android:layout_height="75dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="160dp"
         android:text="Emotion Journal"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toEndOf="@+id/quiz"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,11 +35,11 @@
         android:id="@+id/todolist"
         android:layout_width="125dp"
         android:layout_height="75dp"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="264dp"
         android:text="To-Do List"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -47,14 +47,12 @@
         android:id="@+id/profile"
         android:layout_width="125dp"
         android:layout_height="75dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="60dp"
         android:text="Profile"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/todolist"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

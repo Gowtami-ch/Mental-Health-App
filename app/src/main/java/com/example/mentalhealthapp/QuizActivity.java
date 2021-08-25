@@ -75,7 +75,7 @@ public class QuizActivity extends AppCompatActivity {
     Question que47 = new Question("Rate your satisfaction with your Emotional acceptance of the inescapable reality of aging", "Very happy","Mildly happy", "Mildly disappointed", "Very disappointed", "Completely disappointed", true);
     // Category-4
     Question que48 = new Question("How frequently do you moderately exercise?", "Daily", "3-4 times per week", "Once or twice a week", "Once or twice a month", "Never", true);
-    Question que49 = new Question("How often do you get a full, restful night of sleep?", "Daily", "3-4 times per week", "Once or twice a week", "Once or twice a month", "Never", true);
+    Question que49 = new Question("How often do you get a full, restful night of sleep?", "Dail", "3-4 times per week", "Once or twice a week", "Once or twice a month", "Never", true);
     Question que50 = new Question("To what extent is your energy sufficient for our work and daily activities?\n", "Daily", "3-4 times per week", "Once or twice a week", "Once or twice a month", "Never", true);
     Question que51 = new Question("How closely does your weight approach the ideal level?", "Daily", "3-4 times per week", "Once or twice a week", "Once or twice a month", "Never", true);
     Question que52 = new Question("To what extent do you eat a nutritious diet?", "Daily", "3-4 times per week", "Once or twice a week", "Once or twice a month", "Never", true);
