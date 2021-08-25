@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private Button quiz;
     private Button journal;
     private Button todolist;
+    private Button profile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +41,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Working Fine", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(MainActivity.this,ToDoListActivity.class);
+                startActivity(intent);
+            }
+        });
+        profile = findViewById(R.id.profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Working Fine", Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this,ProfileActivity.class);
                 startActivity(intent);
             }
         });
