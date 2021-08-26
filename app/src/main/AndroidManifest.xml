@@ -16,7 +16,9 @@
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Writing"
-            android:exported="true" />
+            android:exported="true"
+            android:label="NewJournal"
+            android:parentActivityName=".JournalActivity"/>
         <activity
             android:name=".ToDoListActivity"
             android:exported="true"
@@ -46,6 +48,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+         <activity android:name=".CalendarActivity"></activity>
     </application>
 
 </manifest>
