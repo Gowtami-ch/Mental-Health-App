@@ -7,4 +7,7 @@
     <string name="stress_test">Stress Level Assessment Test</string>
     <string name="forward">forward</string>
     <string name="back">back</string>
+    <string name="share">share</string>
+    <string name="next" />
+    <string name="next1">NEXT</string>
 </resources>
