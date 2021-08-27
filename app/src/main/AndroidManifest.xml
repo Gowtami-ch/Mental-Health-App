@@ -10,8 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalHealthApp">
         <activity
-            android:name=".NewsActivity"
+            android:name=".DetailsActivity"
             android:exported="true" />
+        <activity
+            android:name=".NewsActivity"
+            android:exported="true"
+            android:label="News"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ProfileActivity"
             android:exported="true"

@@ -37,14 +37,14 @@
         android:id="@+id/todolist"
         android:layout_width="125dp"
         android:layout_height="75dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/roundbutton"
         android:text="To-Do List"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/roundbutton"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/profile"
@@ -58,5 +58,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/roundbutton"/>
+
+    <Button
+        android:id="@+id/news"
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="36dp"
+        android:text="News"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toEndOf="@+id/todolist"
+        app:layout_constraintTop_toBottomOf="@+id/journal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

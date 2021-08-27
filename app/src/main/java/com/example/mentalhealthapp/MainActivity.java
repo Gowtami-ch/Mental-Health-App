@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button journal;
     private Button todolist;
     private Button profile;
+    private Button news;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+        news = findViewById(R.id.news);
+        news.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NewsActivity.class);
                 startActivity(intent);
             }
         });
