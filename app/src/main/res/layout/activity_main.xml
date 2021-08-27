@@ -65,10 +65,23 @@
         android:layout_height="75dp"
         android:layout_marginTop="36dp"
         android:text="News"
+        android:background="@drawable/roundbutton"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toEndOf="@+id/todolist"
         app:layout_constraintTop_toBottomOf="@+id/journal" />
+    <Button
+        android:id="@+id/meme"
+        android:layout_width="125dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="148dp"
+        android:background="@drawable/roundbutton"
+        android:text="Memes"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

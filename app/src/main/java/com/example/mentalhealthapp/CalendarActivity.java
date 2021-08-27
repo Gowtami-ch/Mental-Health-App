@@ -20,8 +20,8 @@ public class CalendarActivity extends AppCompatActivity {
                 String date = (i1+1) + "/" + i2 + i;
                 Log.d(TAG, "onSelectedDayChange: mm/dd/yyyy" + date);
                 Intent intent= new Intent(CalendarActivity.this, CalendarView.class);
-                Intent date1 = Intent.putExtra("date", date);
-                 startActivity(intent);
+                intent.putExtra("date", date);
+                startActivity(intent);
             }
         });
     }

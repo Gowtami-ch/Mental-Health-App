@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button journal;
     private Button todolist;
     private Button profile;
+    private Button news;
     private Button meme;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

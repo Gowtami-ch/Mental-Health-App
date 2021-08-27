@@ -14,6 +14,11 @@
             android:label="Meme"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".NewsActivity"
+            android:exported="true"
+            android:label="News"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".ProfileActivity"
             android:exported="true"
             android:label="Profile"
