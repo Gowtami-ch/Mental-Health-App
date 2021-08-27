@@ -1,52 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/img1"
     tools:context=".ToDoListActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewToDoList"
+  <LinearLayout
+      android:id="@+id/id_bottom_section"
+      android:layout_width="match_parent"
+      android:padding="10dp"
+      android:layout_alignParentBottom="true"
+      android:layout_height="wrap_content"
+      tools:ignore="MissingConstraints" >
+       <EditText
+           android:id="@+id/id_edit_text"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:layout_marginRight="10dp"
+           tools:ignore="MissingConstraints" />
+       <Button
+           android:layout_width="wrap_content"
+           android:onClick="addItemToList"
+           android:text ="Add"
+           android:layout_height="wrap_content"
+           tools:ignore="MissingConstraints" />
+
+  </LinearLayout>
+
+    <LinearLayout
+        android:layout_above="@id/id_bottom_section"
+        android:background="#eee"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:foregroundGravity="top"
-        android:scrollbars="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.120000005" />
+        android:layout_height="match_parent">
+      <ListView
+          android:id="@+id/id_list_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"></ListView>
+    </LinearLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_begin="523dp" />
-
-    <Button
-        android:id="@+id/btnNewToDoCreate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="15dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline6" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="217dp" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
