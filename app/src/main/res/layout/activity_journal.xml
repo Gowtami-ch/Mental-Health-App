@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JournalActivity">
+    tools:context=".JournalActivity"
+    android:background="@drawable/img1">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -49,7 +50,6 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <TextView
         android:id="@+id/journalDescription"
         android:layout_width="0dp"
@@ -65,7 +65,7 @@
         android:padding="5dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewJournalMain"
+        android:id="@+id/listOfNotes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
