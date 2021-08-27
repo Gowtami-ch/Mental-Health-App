@@ -24,14 +24,13 @@
         android:id="@+id/journal"
         android:layout_width="125dp"
         android:layout_height="75dp"
-        android:layout_marginTop="160dp"
+        android:background="@drawable/roundbutton"
         android:text="Emotion Journal"
         android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/quiz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toEndOf="@+id/quiz"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/roundbutton"/>
+        app:layout_constraintStart_toEndOf="@+id/quiz" />
 
     <Button
         android:id="@+id/todolist"
@@ -63,14 +62,13 @@
         android:id="@+id/news"
         android:layout_width="125dp"
         android:layout_height="75dp"
-        android:layout_marginTop="36dp"
-        android:text="News"
         android:background="@drawable/roundbutton"
+        android:text="News"
         android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/todolist"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toEndOf="@+id/todolist"
-        app:layout_constraintTop_toBottomOf="@+id/journal" />
+        app:layout_constraintStart_toEndOf="@+id/todolist" />
     <Button
         android:id="@+id/meme"
         android:layout_width="125dp"
