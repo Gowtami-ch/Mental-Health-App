@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button journal;
     private Button todolist;
     private Button profile;
-    private Button news;
+    private Button meme;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        news = findViewById(R.id.news);
-        news.setOnClickListener(new View.OnClickListener() {
+        meme = findViewById(R.id.meme);
+        meme.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, NewsActivity.class);
+                Intent intent = new Intent(MainActivity.this, MemeActivity.class);
                 startActivity(intent);
             }
         });
