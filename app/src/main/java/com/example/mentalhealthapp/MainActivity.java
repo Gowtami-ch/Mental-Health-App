@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button profile;
     private Button news;
     private Button meme;
-    @Override
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
