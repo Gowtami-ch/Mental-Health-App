@@ -61,5 +61,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        news = findViewById(R.id.news);
+        news.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NewsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
