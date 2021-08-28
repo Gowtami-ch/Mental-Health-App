@@ -81,7 +81,12 @@ public class NewsActivity extends AppCompatActivity {
                 }
             }
         });
-
+        btnAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
 
 
     }
@@ -122,4 +127,17 @@ public class NewsActivity extends AppCompatActivity {
         return country.toLowerCase();
     }
 
+    public void showDialog(){
+        Button btnClose;
+        dialog.setContentView(R.layout.about_us_pop_up);
+        dialog.show();
+        btnClose = dialog.findViewById(R.id.close);
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
 }
