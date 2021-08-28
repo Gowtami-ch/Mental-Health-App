@@ -56,4 +56,10 @@ public class CalendarActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void finish(){
+        Intent intent=new Intent(CalendarActivity.this,JournalActivity.class);
+        startActivity(intent);
+    }
 }

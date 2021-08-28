@@ -68,23 +68,6 @@ public class JournalPreviewAdapter extends RecyclerView.Adapter<JournalPreviewAd
                 setJournalEntries(journalEntries);
             }
         });
-
-        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                JournalEntry j=journalEntries.get(holder.getAdapterPosition());
-                Intent intent=new Intent(c,JournalEditing.class);
-                intent.putExtra("title",j.getTitle());
-                intent.putExtra("content",j.getContent());
-                intent.putExtra("id",j.getId());
-                intent.putExtra("day",j.getDay());
-                intent.putExtra("month",j.getMonth());
-                intent.putExtra("year",j.getYear());
-
-                c.startActivity(intent);
-            }
-        });
-
     }
 
     @Override
@@ -95,7 +78,7 @@ public class JournalPreviewAdapter extends RecyclerView.Adapter<JournalPreviewAd
     public static class viewHolder extends RecyclerView.ViewHolder{
 
         private TextView title, startLine;
-        private ImageButton btnDelete,btnEdit;
+        private ImageButton btnDelete;
         private CardView parentCard;
 
         public viewHolder(@NonNull View itemView) {
@@ -103,7 +86,6 @@ public class JournalPreviewAdapter extends RecyclerView.Adapter<JournalPreviewAd
             title=itemView.findViewById(R.id.txtTitleOfDiary);
             startLine=itemView.findViewById(R.id.txtPreviewOfDiary);
             btnDelete=itemView.findViewById(R.id.imgbtnDelete);
-            btnEdit=itemView.findViewById(R.id.imgbtnEdit);
             parentCard=itemView.findViewById(R.id.cardViewJournal);
         }
 
