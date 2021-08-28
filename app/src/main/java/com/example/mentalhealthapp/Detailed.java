@@ -45,14 +45,11 @@ public class Detailed extends AppCompatActivity {
         String imageUrl = intent.getStringExtra("imageUrl");
         String url = intent.getStringExtra("url");
 
-
         tvTitle.setText(title);
         tvSource.setText(source);
         tvTime.setText(time);
         tvDesc.setText(desc);
-
         Picasso.with(Detailed.this).load(imageUrl).into(imageView);
-
         webView.getSettings().setDomStorageEnabled(true);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadsImagesAutomatically(true);
