@@ -11,10 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalHealthApp">
         <activity
-            android:name=".JournalEditing"
-            android:exported="true"
-            android:parentActivityName=".JournalActivity"/>
-        <activity
             android:name=".JournalView"
             android:exported="true"
             android:parentActivityName=".JournalActivity" />

@@ -29,13 +29,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtTitleOfDiary"
+            android:maxHeight="200dp"
+            android:maxLines="5"
+            android:overScrollMode="never"
             android:text="preview"
             android:textSize="20dp" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="5dp"
             android:layout_below="@id/txtPreviewOfDiary">
 
             <ImageButton
@@ -44,15 +46,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:contentDescription="TODO"
-                app:srcCompat="@android:drawable/btn_dialog" />
+                app:srcCompat="@android:drawable/ic_menu_delete" />
 
-            <ImageButton
-                android:id="@+id/imgbtnEdit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:contentDescription="TODO"
-                app:srcCompat="@android:drawable/ic_notification_clear_all" />
         </RelativeLayout>
 
     </RelativeLayout>
