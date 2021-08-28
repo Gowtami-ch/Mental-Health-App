@@ -54,6 +54,12 @@ public class JournalActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 //        journalRec.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,true));
+    }
 
+    @Override
+    public void finish(){
+        Intent intent=new Intent(JournalActivity.this,MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }

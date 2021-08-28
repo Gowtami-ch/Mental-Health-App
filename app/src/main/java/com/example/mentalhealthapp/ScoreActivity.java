@@ -39,9 +39,9 @@ public class ScoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(ScoreActivity.this,MainActivity.class);
+                intent.setFlags( intent.FLAG_ACTIVITY_NEW_TASK |intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
         });
-
     }
 }
