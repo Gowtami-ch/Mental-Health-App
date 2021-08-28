@@ -21,7 +21,4 @@ public interface ApiInterface {
             @Query("q") String query,
             @Query("apiKey") String apiKey
     );
-
-
-
 }
