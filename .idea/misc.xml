@@ -18,8 +18,10 @@
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/black_backround.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/gradient.xml" value="0.21944444444444444" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_bio.xml" value="0.2703125" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_close_black_24dp.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_dot_24dp.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.2703125" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/about_us_pop_up.xml" value="0.24818840579710144" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_detailed.xml" value="0.1" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_journal.xml" value="0.25416666666666665" />
@@ -30,9 +32,10 @@
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_profile_activity.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_quiz.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_score.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.24818840579710144" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_to_do_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/item_news.xml" value="0.1" />
-        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/items.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/items.xml" value="0.2" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/list_row.xml" value="0.25416666666666665" />
       </map>
     </option>
