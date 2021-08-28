@@ -10,22 +10,22 @@
 
 
     <EditText
-        android:id="@+id/jViewContent"
+        android:id="@+id/jViewContentEdit"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@null"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="  Write Your Journel"
+        android:hint="  Edit Your Journal"
         android:inputType="textMultiLine"
         android:isScrollContainer="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/jViewTitle"
-        app:layout_constraintStart_toStartOf="@+id/jViewTitle"
-        app:layout_constraintTop_toBottomOf="@+id/jViewTitle" />
+        app:layout_constraintEnd_toEndOf="@+id/jViewTitleEdit"
+        app:layout_constraintStart_toStartOf="@+id/jViewTitleEdit"
+        app:layout_constraintTop_toBottomOf="@+id/jViewTitleEdit" />
 
     <EditText
-        android:id="@+id/jViewTitle"
+        android:id="@+id/jViewTitleEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -35,10 +35,10 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jViewHeading" />
+        app:layout_constraintTop_toBottomOf="@+id/jViewHeadingEdit" />
 
     <TextView
-        android:id="@+id/jViewHeading"
+        android:id="@+id/jViewHeadingEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
@@ -51,26 +51,26 @@
         app:layout_constraintVertical_bias="0.04000002" />
 
     <Button
-        android:id="@+id/btnSave"
+        android:id="@+id/btnSaveEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
         android:text="Save"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/gd1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/gd2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/gd1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="57dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
+        android:id="@+id/gd2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

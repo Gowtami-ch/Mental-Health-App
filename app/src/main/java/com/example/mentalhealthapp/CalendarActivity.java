@@ -38,7 +38,7 @@ public class CalendarActivity extends AppCompatActivity {
         filtered.add(new JournalEntry("Diary1","This is my Diary",1,2,3));
         filtered.add(new JournalEntry("Diary2","This is my 2nd Diary",1,2,3));
         filtered.add(new JournalEntry("Diary3","This is my 3rd Diary",1,2,3));
-        JournalPreviewAdapter adapter=new JournalPreviewAdapter(filtered);
+        JournalPreviewAdapter adapter=new JournalPreviewAdapter(filtered,CalendarActivity.this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,true));
         mCalendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -47,7 +47,7 @@ public class CalendarActivity extends AppCompatActivity {
                 Log.d(TAG, "onSelectedDayChange: mm/dd/yyyy " + date);
                 //TODO filtering based on JournalEntry Class Attributes -> Need Database
                 filtered.clear();
-                filtered= db.getFilteredJournalEntries(i2,i1,i);
+                filtered= db.getFilteredJournalEntries(i2,i1+1,i);
                 adapter.setJournalEntries(filtered);
                 if(recyclerView.getChildCount()==0){
                     hiddenTxt.setVisibility(View.VISIBLE);
