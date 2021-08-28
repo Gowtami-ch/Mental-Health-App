@@ -12,7 +12,6 @@ public class Source {
     @SerializedName("name")
     @Expose
     private String name;
-
     public String getId() {
         return id;
     }
@@ -24,7 +23,6 @@ public class Source {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
