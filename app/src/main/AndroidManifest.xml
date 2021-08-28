@@ -11,9 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalHealthApp">
         <activity
+            android:name=".JournalEditing"
+            android:exported="true"
+            android:parentActivityName=".JournalActivity"/>
+        <activity
+            android:name=".JournalView"
+            android:exported="true"
+            android:parentActivityName=".JournalActivity" />
+        <activity
             android:name=".Detailed"
             android:exported="true"
-            android:parentActivityName=".NewsActivity"/>
+            android:parentActivityName=".NewsActivity" />
         <activity
             android:name=".NewsActivity"
             android:exported="true"
@@ -63,7 +71,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalendarActivity" />
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="true"
+            android:label="Calendar"
+            android:parentActivityName=".JournalActivity" />
     </application>
 
 </manifest>

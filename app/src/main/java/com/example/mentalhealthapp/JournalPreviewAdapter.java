@@ -1,6 +1,7 @@
 package com.example.mentalhealthapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -46,13 +48,40 @@ public class JournalPreviewAdapter extends RecyclerView.Adapter<JournalPreviewAd
         holder.title.setText(journalEntries.get(position).getTitle());
         holder.startLine.setText(journalEntries.get(position).getContent());
 
+        holder.parentCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(c,String.valueOf(journalEntries.get(holder.getAdapterPosition()).getId()),Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(c,JournalView.class);
+                intent.putExtra("title",journalEntries.get(holder.getAdapterPosition()).getTitle());
+                intent.putExtra("content",journalEntries.get(holder.getAdapterPosition()).getContent());
+                c.startActivity(intent);
+            }
+        });
+
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean b = db.deleteJournal(journalEntries.get(holder.getAdapterPosition()).getId());
+                boolean b = db.deleteJournal(journalEntries.get(holder.getAdapterPosition()).getContent());
                 Toast.makeText(c,"delete = "+b,Toast.LENGTH_SHORT).show();
                 journalEntries.remove(holder.getAdapterPosition());
                 setJournalEntries(journalEntries);
+            }
+        });
+
+        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                JournalEntry j=journalEntries.get(holder.getAdapterPosition());
+                Intent intent=new Intent(c,JournalEditing.class);
+                intent.putExtra("title",j.getTitle());
+                intent.putExtra("content",j.getContent());
+                intent.putExtra("id",j.getId());
+                intent.putExtra("day",j.getDay());
+                intent.putExtra("month",j.getMonth());
+                intent.putExtra("year",j.getYear());
+
+                c.startActivity(intent);
             }
         });
 
@@ -67,6 +96,7 @@ public class JournalPreviewAdapter extends RecyclerView.Adapter<JournalPreviewAd
 
         private TextView title, startLine;
         private ImageButton btnDelete,btnEdit;
+        private CardView parentCard;
 
         public viewHolder(@NonNull View itemView) {
             super(itemView);
@@ -74,6 +104,7 @@ public class JournalPreviewAdapter extends RecyclerView.Adapter<JournalPreviewAd
             startLine=itemView.findViewById(R.id.txtPreviewOfDiary);
             btnDelete=itemView.findViewById(R.id.imgbtnDelete);
             btnEdit=itemView.findViewById(R.id.imgbtnEdit);
+            parentCard=itemView.findViewById(R.id.cardViewJournal);
         }
 
 

@@ -47,7 +47,7 @@ public class CalendarActivity extends AppCompatActivity {
                 Log.d(TAG, "onSelectedDayChange: mm/dd/yyyy " + date);
                 //TODO filtering based on JournalEntry Class Attributes -> Need Database
                 filtered.clear();
-                filtered= db.getFilteredJournalEntries(i2,i1,i);
+                filtered= db.getFilteredJournalEntries(i2,i1+1,i);
                 adapter.setJournalEntries(filtered);
                 if(recyclerView.getChildCount()==0){
                     hiddenTxt.setVisibility(View.VISIBLE);

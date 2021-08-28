@@ -18,7 +18,7 @@ public class JournalDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="datadb";
     private static final String DATABASE_TABLE="notestable";
     //column names for database table
-    private static final String KEY_ID= "id";
+    private static final String KEY_ID= "_id";
     private static final String KEY_TITLE= "title";
     private static final String KEY_CONTENT= "content";
     private static final String KEY_DAY="day";
@@ -34,7 +34,7 @@ public class JournalDatabase extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         //CREATE TABLE nametame(id INT PRIMARY KEY, title TEXT, content TEXT, date TEXT, time TEXT);
         String query;
-        query = new StringBuilder().append("CREATE TABLE ").append(DATABASE_TABLE).append(" (").append(KEY_ID).append(" INT PRIMARY KEY, ").append(KEY_TITLE).append(" TEXT, ").append(KEY_CONTENT).append(" TEXT, ").append(KEY_DAY).append(" TEXT, ").append(KEY_MONTH).append(" TEXT, ").append(KEY_YEAR).append(" TEXT").append(")").toString();
+        query = new StringBuilder().append("CREATE TABLE ").append(DATABASE_TABLE).append(" (").append(KEY_ID).append(" INTEGER PRIMARY KEY,").append(KEY_TITLE).append(" TEXT, ").append(KEY_CONTENT).append(" TEXT, ").append(KEY_DAY).append(" TEXT, ").append(KEY_MONTH).append(" TEXT, ").append(KEY_YEAR).append(" TEXT").append(") ").toString();
         db.execSQL(query);
     }
 
@@ -86,6 +86,7 @@ public class JournalDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
 
+
         cv.put(KEY_TITLE,journal.getTitle());
         cv.put(KEY_CONTENT,journal.getContent());
         cv.put(KEY_DAY,journal.getDay());
@@ -96,7 +97,7 @@ public class JournalDatabase extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void updateJournal(JournalEntry journal,int id){
+    public boolean updateJournal(JournalEntry journal,int id){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues cv=new ContentValues();
 
@@ -108,15 +109,17 @@ public class JournalDatabase extends SQLiteOpenHelper {
         cv.put(KEY_YEAR,journal.getYear());
 
         //Refer Documentation if doesn't work
-        db.update(DATABASE_TABLE,cv,"id=" + id,null);
+        int x = db.update(DATABASE_TABLE,cv,"_id=?",new String[]{String.valueOf(id)});
         db.close();
+        return x>0;
     }
 
-    public boolean deleteJournal(int id){
+    public boolean deleteJournal(String content){
         SQLiteDatabase db=this.getWritableDatabase();
 //        db.delete(DATABASE_TABLE,"id=" +id,null);
         //TODO WONT WORK BECAUSE ROWID IS NOT INCREMENTING....
-        int x = db.delete(DATABASE_TABLE,"id=?",new String[]{String.valueOf(id)});
+        //TODO pressing back(menu button works fine though) does not delete record from journal view if deleted in calendar
+        int x = db.delete(DATABASE_TABLE,KEY_CONTENT+"=?",new String[]{content});
         db.close();
         return x>0;
     }
