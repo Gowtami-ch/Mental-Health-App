@@ -33,10 +33,7 @@
             android:background="@drawable/ic_dot_24dp"
             android:id="@+id/aboutUs"/>
 
-
     </LinearLayout>
-
-
 
     <GridLayout
         android:layout_width="match_parent"
