@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,11 +10,14 @@
     app:cardCornerRadius="15dp">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/relLayout"
+        android:layout_height="wrap_content"
+        android:padding="2dp">
+
 
         <TextView
             android:id="@+id/txtTitleOfDiary"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Title"
             android:textSize="20dp"
@@ -21,13 +25,34 @@
 
         <TextView
             android:id="@+id/txtPreviewOfDiary"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtTitleOfDiary"
             android:text="preview"
             android:textSize="20dp" />
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@id/txtPreviewOfDiary">
 
+            <ImageButton
+                android:id="@+id/imgbtnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:contentDescription="TODO"
+                app:srcCompat="@android:drawable/btn_dialog" />
+
+            <ImageButton
+                android:id="@+id/imgbtnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="TODO"
+                app:srcCompat="@android:drawable/ic_notification_clear_all" />
+        </RelativeLayout>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

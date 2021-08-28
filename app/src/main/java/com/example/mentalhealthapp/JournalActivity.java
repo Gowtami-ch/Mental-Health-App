@@ -50,7 +50,7 @@ public class JournalActivity extends AppCompatActivity {
             }
         });
         journalEntries=db.getJournalEntries();
-        JournalPreviewAdapter adapter=new JournalPreviewAdapter(journalEntries);
+        JournalPreviewAdapter adapter=new JournalPreviewAdapter(journalEntries,JournalActivity.this);
         recyclerView.setAdapter(adapter);
 //        journalRec.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,true));

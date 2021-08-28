@@ -6,8 +6,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
 import java.util.ArrayList;
 
 public class JournalDatabase extends SQLiteOpenHelper {
@@ -55,7 +53,7 @@ public class JournalDatabase extends SQLiteOpenHelper {
 
         if(cursor.moveToFirst()){
             do{
-                journalEntries.add(new JournalEntry(cursor.getString(1),cursor.getString(2),
+                journalEntries.add(new JournalEntry(cursor.getInt(0),cursor.getString(1),cursor.getString(2),
                         cursor.getInt(3),cursor.getInt(4),cursor.getInt(5)));
             }while(cursor.moveToNext());
         }
@@ -74,8 +72,8 @@ public class JournalDatabase extends SQLiteOpenHelper {
 
         if(cursor.moveToFirst()){
             do{
-                journalEntries.add(new JournalEntry(cursor.getString(1),cursor.getString(2),
-                        cursor.getInt(3),cursor.getInt(4),cursor.getInt(5)));
+                journalEntries.add(new JournalEntry(cursor.getInt(0), cursor.getString(1), cursor.getString(2),
+                        cursor.getInt(3), cursor.getInt(4), cursor.getInt(5)));
             }while(cursor.moveToNext());
         }
 
@@ -114,11 +112,13 @@ public class JournalDatabase extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void deleteJournal(int id){
+    public boolean deleteJournal(int id){
         SQLiteDatabase db=this.getWritableDatabase();
-
-        db.delete(DATABASE_TABLE,"id=" +id,null);
+//        db.delete(DATABASE_TABLE,"id=" +id,null);
+        //TODO WONT WORK BECAUSE ROWID IS NOT INCREMENTING....
+        int x = db.delete(DATABASE_TABLE,"id=?",new String[]{String.valueOf(id)});
         db.close();
+        return x>0;
     }
 
 }
