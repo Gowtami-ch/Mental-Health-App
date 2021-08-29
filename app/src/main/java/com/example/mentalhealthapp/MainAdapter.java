@@ -33,7 +33,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder>{
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_item,parent,false);
         return new MyViewHolder(view);
     }
-    
+
     @Override
     public void onBindViewHolder(@NonNull MainAdapter.MyViewHolder holder, int position) {
         int val = position;
