@@ -12,7 +12,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class IntroductoryActivity extends AppCompatActivity
 {
-    FloatingActionButton fab;
+    FloatingActionButton fabi;
     ImageView pinkbg;
     LottieAnimationView lottie;
     @Override
@@ -23,12 +23,12 @@ public class IntroductoryActivity extends AppCompatActivity
         lottie=findViewById(R.id.lottie);
         pinkbg.animate().translationY(-1600).setDuration(1000).setStartDelay(4000);
         lottie.animate().translationY(1400).setDuration(1000).setStartDelay(4000);
-        fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        fabi = findViewById(R.id.fabi);
+        fabi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
-                Intent intent = new Intent(IntroductoryActivity.this, MainActivity.class);
+                Intent intent = new Intent(IntroductoryActivity.this, screen1.class);
                 startActivity(intent);
             }
         });
