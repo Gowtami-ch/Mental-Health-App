@@ -44,27 +44,27 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder>{
                 public void onClick(View view) {
                     Intent intent;
                     switch (val){
+//                        case 0:
+//                            intent = new Intent(context,ProfileActivity.class);
+//                            context.startActivity(intent);
+//                            break;
                         case 0:
-                            intent = new Intent(context,ProfileActivity.class);
-                            context.startActivity(intent);
-                            break;
-                        case 1:
                             intent = new Intent(context,QuizActivity.class);
                             context.startActivity(intent);
                             break;
-                        case 2:
+                        case 1:
                             intent = new Intent(context,NewsActivity.class);
                             context.startActivity(intent);
                             break;
-                        case 3:
+                        case 2:
                             intent = new Intent(context,MemeActivity.class);
                             context.startActivity(intent);
                             break;
-                        case 4:
+                        case 3:
                             intent = new Intent(context,JournalActivity.class);
                             context.startActivity(intent);
                             break;
-                        case 5:
+                        case 4:
                             intent = new Intent(context,ToDoListActivity.class);
                             context.startActivity(intent);
                             break;
