@@ -1,29 +1,14 @@
-plugins {
-    id 'com.android.application'
-}
-
-android {
-    compileSdk 31
-
-    defaultConfig {
-        applicationId "com.example.mentalhealthapp"
-        minSdk 19
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
     }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.0"
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
 
@@ -56,4 +41,9 @@ dependencies {
 }
 
 
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
 
