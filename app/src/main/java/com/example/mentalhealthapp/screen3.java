@@ -11,14 +11,14 @@ public class screen3 extends AppCompatActivity {
     Button donebtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        donebtn=findViewById(R.id.donebtn);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen3);
+        donebtn=findViewById(R.id.donebtn);
         donebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(screen3.this, MainActivity.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(screen3.this, MainActivity.class);
+                startActivity(intent2);
             }
         });
     }
