@@ -34,10 +34,7 @@ public class CalendarActivity extends AppCompatActivity {
         mCalendarView = (CalendarView) findViewById(R.id.calendarView);
         recyclerView = findViewById(R.id.recyclerViewCalendar);
         hiddenTxt=findViewById(R.id.txtViewHidden);
-        filtered =db.getFilteredJournalEntries(1,2,3);
-        filtered.add(new JournalEntry("Diary1","This is my Diary",1,2,3));
-        filtered.add(new JournalEntry("Diary2","This is my 2nd Diary",1,2,3));
-        filtered.add(new JournalEntry("Diary3","This is my 3rd Diary",1,2,3));
+        filtered =db.getJournalEntries();
         JournalPreviewAdapter adapter=new JournalPreviewAdapter(filtered,CalendarActivity.this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,true));
@@ -48,11 +45,13 @@ public class CalendarActivity extends AppCompatActivity {
                 //TODO filtering based on JournalEntry Class Attributes -> Need Database
                 filtered.clear();
                 filtered= db.getFilteredJournalEntries(i2,i1+1,i);
-                adapter.setJournalEntries(filtered);
-                if(recyclerView.getChildCount()==0){
+                if(filtered.size()>0){
+                    hiddenTxt.setVisibility(View.GONE);
+                }
+                else{
                     hiddenTxt.setVisibility(View.VISIBLE);
                 }
-
+                adapter.setJournalEntries(filtered);
             }
         });
     }

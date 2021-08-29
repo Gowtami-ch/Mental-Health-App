@@ -65,6 +65,7 @@ public class ToDoListActivity extends AppCompatActivity {
                              public void onClick(DialogInterface dialogInterface, int i) {
                                  toDoList.remove(which_item);
                                  arrayAdapter.notifyDataSetChanged();
+                                 PrefConfig.writeListInPref(ToDoListActivity.this,toDoList);
                              }
                          })
                          .setNegativeButton("No",null)
