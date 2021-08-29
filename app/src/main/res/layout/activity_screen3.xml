@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewh2"
         android:layout_width="289dp"
         android:layout_height="90dp"
         android:text="2. Start tracking your weekly performance"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.463" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewh3"
         android:layout_width="305dp"
         android:layout_height="113dp"
         android:text="3. Start reading arcticles and enjoy memes"
@@ -34,7 +34,7 @@
         app:layout_constraintVertical_bias="0.697" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewh1"
         android:layout_width="289dp"
         android:layout_height="90dp"
         android:text="1. Start keeping a sleep journal"
@@ -47,30 +47,32 @@
         app:layout_constraintVertical_bias="0.269" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="313dp"
-        android:layout_height="74dp"
+        android:id="@+id/textViewh"
+        android:layout_width="372dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="64dp"
         android:text="Tips to Try It Now"
         android:textSize="38sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/textViewh1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+        app:layout_constraintVertical_bias="0.372" />
 
     <Button
         android:id="@+id/donebtn"
         android:layout_width="151dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="56dp"
         android:background="@drawable/roundbutton"
         android:text="I'm done"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintHorizontal_bias="0.807"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textViewh3"
         app:layout_constraintVertical_bias="0.593" />
 
     <ImageView
