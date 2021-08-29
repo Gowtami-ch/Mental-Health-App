@@ -1,5 +1,7 @@
 package com.example.mentalhealthapp.model;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
+
 public class Cards {
     private int imageProfile;
     private String cardtext;

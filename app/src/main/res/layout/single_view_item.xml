@@ -21,9 +21,10 @@
         app:cardElevation="7dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_card">
+            android:background="@color/hotpink">
 
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -42,7 +43,7 @@
                 android:id="@+id/cardtext"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
                 android:text="TextView"
                 android:textAlignment="viewStart"

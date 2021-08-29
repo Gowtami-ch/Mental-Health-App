@@ -3,6 +3,7 @@ package com.example.mentalhealthapp;
 import android.content.ContentProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mentalhealthapp.model.Cards;
@@ -39,15 +41,31 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder>{
         int val = position;
         holder.profileImage.setImageResource(cardsList.get(position).getImageProfile());
         holder.cardtext.setText(cardsList.get(position).getCardtext());
+
+        switch(val){
+            case 0:
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#FFA07A"));
+                break;
+            case 1:
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#FF69B4"));
+                break;
+            case 2:
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#9370DB"));
+                break;
+            case 3:
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#BDB76B"));
+                break;
+            case 4:
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#5F9EA0"));
+                break;
+            default:
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#FFFFE0"));
+        }
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
                 public void onClick(View view) {
                     Intent intent;
                     switch (val){
-//                        case 0:
-//                            intent = new Intent(context,ProfileActivity.class);
-//                            context.startActivity(intent);
-//                            break;
                         case 0:
                             intent = new Intent(context,QuizActivity.class);
                             context.startActivity(intent);
@@ -82,10 +100,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder>{
     public class MyViewHolder extends RecyclerView.ViewHolder {
         CircleImageView profileImage;
         TextView cardtext;
+        ConstraintLayout constraintLayout;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             profileImage = itemView.findViewById(R.id.profileImage);
             cardtext = itemView.findViewById(R.id.cardtext);
+            constraintLayout = itemView.findViewById(R.id.constraintLayout);
         }
     }
 }
