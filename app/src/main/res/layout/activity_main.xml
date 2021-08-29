@@ -6,80 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/quiz"
-        android:layout_width="125dp"
-        android:layout_height="75dp"
-        android:text="Take Test"
-        android:textSize="18sp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.237"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.303"
-        android:background="@drawable/roundbutton"/>
-
-    <Button
-        android:id="@+id/journal"
-        android:layout_width="125dp"
-        android:layout_height="75dp"
-        android:background="@drawable/roundbutton"
-        android:text="Emotion Journal"
-        android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/quiz"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toEndOf="@+id/quiz" />
-
-    <Button
-        android:id="@+id/todolist"
-        android:layout_width="125dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="272dp"
-        android:background="@drawable/roundbutton"
-        android:text="To-Do List"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/profile"
-        android:layout_width="125dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="60dp"
-        android:text="Profile"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/roundbutton"/>
-
-    <Button
-        android:id="@+id/news"
-        android:layout_width="125dp"
-        android:layout_height="75dp"
-        android:background="@drawable/roundbutton"
-        android:text="News"
-        android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/todolist"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toEndOf="@+id/todolist" />
-    <Button
-        android:id="@+id/meme"
-        android:layout_width="125dp"
-        android:layout_height="75dp"
-        android:layout_marginBottom="148dp"
-        android:background="@drawable/roundbutton"
-        android:text="Memes"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

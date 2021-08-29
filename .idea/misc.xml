@@ -22,6 +22,7 @@
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_close_black_24dp.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_dot_24dp.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.2703125" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/roundbutton.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/about_us_pop_up.xml" value="0.24818840579710144" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_detailed.xml" value="0.1" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_details.xml" value="0.25416666666666665" />
@@ -35,9 +36,11 @@
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_score.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.24818840579710144" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_to_do_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/custom_view.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/item_news.xml" value="0.1" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/items.xml" value="0.2" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/list_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/single_view_item.xml" value="0.264" />
       </map>
     </option>
   </component>
