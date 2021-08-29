@@ -5,6 +5,7 @@
     android:textAppearance="@style/TextAppearance.AppCompat.Large"
     android:textStyle="bold"
     android:text="TextView"
+    android:textColor="@color/black"
     android:layout_height="match_parent">
 
 </TextView>
