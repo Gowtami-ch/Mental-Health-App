@@ -66,7 +66,7 @@ public class JournalDatabase extends SQLiteOpenHelper {
     public ArrayList<JournalEntry> getFilteredJournalEntries(int day,int month,int year){
         SQLiteDatabase db=this.getReadableDatabase();
         ArrayList<JournalEntry> journalEntries=new ArrayList<>();
-        String query="SELECT * FROM " + DATABASE_TABLE + " GROUP BY "+ "year" + " HAVING " + KEY_DAY + "="+day +
+        String query="SELECT * FROM " + DATABASE_TABLE + " WHERE " + KEY_DAY + "="+day +
                 " AND " + KEY_MONTH + "=" + month + " AND " + KEY_YEAR +"="+year + ";";
         Cursor cursor=db.rawQuery(query,null);
 
