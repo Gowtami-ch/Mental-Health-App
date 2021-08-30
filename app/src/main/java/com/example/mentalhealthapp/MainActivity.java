@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         String card[] = getResources().getStringArray(R.array.cardtext);
         int profileImage[] = {R.drawable.quiz, R.drawable.news, R.drawable.meme,
-        R.drawable.journal, R.drawable.todolist};
+        R.drawable.journal, R.drawable.todolist,R.drawable.ic_baseline_show_chart_24};
         for(int i=0; i<card.length; i++){
             Cards cards = new Cards(profileImage[i],card[i]);
             list.add(cards);

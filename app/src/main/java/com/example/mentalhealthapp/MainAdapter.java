@@ -58,6 +58,9 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder>{
             case 4:
                 holder.constraintLayout.setBackgroundColor(Color.parseColor("#5F9EA0"));
                 break;
+            case 5:
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#CD5C5C"));
+                break;
             default:
                 holder.constraintLayout.setBackgroundColor(Color.parseColor("#FFFFE0"));
         }
@@ -84,6 +87,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder>{
                             break;
                         case 4:
                             intent = new Intent(context,ToDoListActivity.class);
+                            context.startActivity(intent);
+                            break;
+                        case 5:
+                            intent = new Intent(context,quizStatistics.class);
                             context.startActivity(intent);
                             break;
 
