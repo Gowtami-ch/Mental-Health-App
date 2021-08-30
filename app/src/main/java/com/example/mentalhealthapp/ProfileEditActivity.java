@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.net.URI;
 
@@ -27,7 +28,7 @@ public class ProfileEditActivity extends AppCompatActivity {
     public EditText nPassword;
     public ImageView profileImage;
    // public String getString;
-    public  String TEXT ,txt, Text;
+    public  String Name,Bio, Text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,38 +43,23 @@ public class ProfileEditActivity extends AppCompatActivity {
 
         profileImage=(ImageView )findViewById(R.id.iv_cp);
 
-        SharedPreferences sharedPreferences=PreferenceManager.getDefaultSharedPreferences(this);
-        String TEXT1 =sharedPreferences.getString("TEXT","");
-        nName.setText(TEXT1);
-        String txt1 =sharedPreferences.getString("txt","");
-        nBio.setText(txt1);
-        String Text1 =sharedPreferences.getString("Text","");
-        nPassword.setText(Text1);
-
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                    //open gallery
-               // Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
-              //  startActivityForResult(openGalleryIntent,1000);
-                   TEXT= nName.getText().toString();
-                   txt=nBio.getText().toString();
-                   Text=nPassword.getText().toString();
-
-                   SharedPreferences sharedPreferences= PreferenceManager.getDefaultSharedPreferences(ProfileEditActivity.this);
-
-                   SharedPreferences.Editor editor =sharedPreferences.edit();
-                  editor.putString("TEXT", TEXT);
-                editor.putString("txt", txt);
-                editor.putString("Text", Text);
-
-                  editor.apply();
+                //open gallery
+                // Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
+                //  startActivityForResult(openGalleryIntent,1000);
+                Name= nName.getText().toString();
+                Bio=nBio.getText().toString();
+//                Text=nPassword.getText().toString();
+//
+                Toast.makeText(ProfileEditActivity.this,Name+" "+Bio,Toast.LENGTH_SHORT).show();
                 Intent intent =new Intent(ProfileEditActivity.this,ProfileActivity.class);
-                intent.putExtra("TEXT",TEXT);
-                intent.putExtra("txt",txt);
-                intent.putExtra("Text",Text);
-                startActivity(intent);
+                intent.putExtra("Name",Name);
+                intent.putExtra("Bio",Bio);
+//                intent.putExtra("Text",Text);
+                setResult(Activity.RESULT_OK,intent);
                 finish();
             }
 

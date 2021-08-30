@@ -13,7 +13,7 @@
     <string name="share">share</string>
     <string name="profile">Profile</string>
     <array name="cardtext">
-<!--        <item>Create or update your profile</item>-->
+        <!--        <item>Create or update your profile</item>-->
         <item>Take our quiz and assess your mental health</item>
         <item>Read some news articles</item>
         <item>Watch some funny memes</item>
