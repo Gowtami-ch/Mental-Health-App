@@ -18,6 +18,14 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        TextView Display1 = findViewById(R.id.tvNameProfile);
+        TextView Display2 = findViewById(R.id.tvBioProfile);
+        Bundle bn=getIntent().getExtras();
+        Bundle bn1=getIntent().getExtras();
+        String Name =bn1.getString("txt");
+        String name =bn.getString("TEXT");
+        Display1.setText(String.valueOf(name));
+        Display2.setText(String.valueOf(Name));
 
         btnBack=findViewById(R.id.btnProfileBack);
         btnEdit=findViewById(R.id.btnProfileEdit);
