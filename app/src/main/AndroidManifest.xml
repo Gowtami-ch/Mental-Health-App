@@ -12,7 +12,8 @@
         android:theme="@style/Theme.MentalHealthApp">
         <activity
             android:name=".quizStatistics"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".screen3"
             android:exported="true"
