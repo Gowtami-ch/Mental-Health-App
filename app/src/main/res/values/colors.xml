@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDar">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
-    <color name="purple_200">#55D394</color>
-    <color name="purple_500">#55D394</color>
-    <color name="purple_700">#55D394</color>
+    <color name="colorPrimary">#F13374</color>
+    <color name="colorPrimaryDar">#F13374</color>
+    <color name="colorAccent">#F13374</color>
+    <color name="purple_200">#F13374</color>
+    <color name="purple_500">#F13374</color>
+    <color name="purple_700">#F13374</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="red_variant">#9C6262</color>
