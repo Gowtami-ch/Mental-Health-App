@@ -1,5 +1,7 @@
 package com.example.mentalhealthapp;
 
+import static android.service.controls.ControlsProviderService.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -27,7 +29,10 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
         Intent intent = getIntent();
-        String score = intent.getStringExtra(QuizActivity.EXTRA_SCORE);
+        String score = intent.getStringExtra(QuizActivity.EXTRA_SCORE), score0 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_0),score1=intent.getStringExtra(QuizActivity.EXTRA_SCORE_1), score2 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_2),
+                score3 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_3), score4 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_4), score5 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_5),
+                score6 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_6), score7 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_7);
+        System.out.println(score0+" "+score1+" "+score2+" "+score3+" "+score4+" "+score5+" "+score6+" "+score7+" ");
 //        String score1="";
 //        String score2="";
 //        String score3="";
