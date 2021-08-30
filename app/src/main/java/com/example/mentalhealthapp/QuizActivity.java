@@ -346,7 +346,7 @@ public class QuizActivity extends AppCompatActivity {
             case 0:
             case 1:
             case 2:
-                min = 1; max = 12;
+                min = 0; max = 11;
                 random_int = (int)(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
                 question.setText(Question);
@@ -359,7 +359,7 @@ public class QuizActivity extends AppCompatActivity {
             case 3:
             case 4:
             case 5:
-                min = 13; max = 19;
+                min = 12; max = 18;
                 random_int = (int)(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
                 question.setText(Question);
@@ -372,7 +372,7 @@ public class QuizActivity extends AppCompatActivity {
             case 6:
             case 7:
             case 8:
-                min = 20; max = 27;
+                min = 19; max = 26;
                 random_int = (int)(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
                 question.setText(Question);
@@ -385,7 +385,7 @@ public class QuizActivity extends AppCompatActivity {
             case 9:
             case 10:
             case 11:
-                min = 28; max = 34;
+                min = 27; max = 33;
                 random_int = (int)(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
                 question.setText(Question);
@@ -399,7 +399,7 @@ public class QuizActivity extends AppCompatActivity {
             case 12:
             case 13:
             case 14:
-                min = 35; max = 43;
+                min = 34; max = 42;
                 random_int = (int)(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
                 question.setText(Question);
@@ -413,7 +413,7 @@ public class QuizActivity extends AppCompatActivity {
             case 15:
             case 16:
             case 17:
-                min = 44; max = 48;
+                min = 43; max = 47;
                 random_int = (int)(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
                 question.setText(Question);
@@ -427,7 +427,7 @@ public class QuizActivity extends AppCompatActivity {
             case 19:
             case 20:
             case 21:
-                min = 49; max = 69;
+                min = 48; max = 68;
                 random_int = (int)(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
                 question.setText(Question);
@@ -441,7 +441,7 @@ public class QuizActivity extends AppCompatActivity {
             case 22:
             case 23:
             case 24:
-                min = 70; max = 79;
+                min = 69; max = 78;
                 random_int = (int)(Math.random()*(max-min+1)+min);
                 Question= questions.get(random_int).question;
                 question.setText(Question);
