@@ -269,8 +269,6 @@ public class QuizActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        for(int i=0; i<8; i++)
-                        System.out.println(scores[i]);
                         Toast.makeText(QuizActivity.this, "Your score is "+score, Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(QuizActivity.this,ScoreActivity.class);
                         intent.putExtra(EXTRA_SCORE,Integer.toString(score));

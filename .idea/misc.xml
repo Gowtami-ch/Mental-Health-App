@@ -6,36 +6,24 @@
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/drawable/bgapp.xml" value="0.14895833333333333" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/drawable/gradient.xml" value="0.14895833333333333" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/drawable/gradient_card.xml" value="0.14895833333333333" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/drawable/gradient_score.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/drawable/help.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/drawable/ic_baseline_help_24.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/drawable/ic_baseline_help_outline_24.xml" value="0.1" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.14895833333333333" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/drawable/ic_baseline_show_chart_24.xml" value="0.14895833333333333" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/about_us_pop_up.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_calendar_view.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_journal.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_main.xml" value="0.1328125" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_meme.xml" value="0.1328125" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_news.xml" value="0.1328125" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_profile.xml" value="0.1328125" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_profile_edit.xml" value="0.16799999999999998" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_quiz_statistics.xml" value="0.2" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_score.xml" value="0.264" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_to_do_list.xml" value="0.2" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_writing.xml" value="0.264" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/basic_item_layout.xml" value="0.1328125" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/basic_item_layout_journal_main.xml" value="0.264" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/basic_item_layout_to_do_list.xml" value="0.1328125" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/calendar_layout.xml" value="0.25833333333333336" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/items.xml" value="0.25833333333333336" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/list_view_layout.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/single_view_item.xml" value="0.4" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/menu/explanation.xml" value="0.264" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/menu/nav.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/black_background.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/black_backround.xml" value="0.2703125" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/firstgradient.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/gradient.xml" value="0.21944444444444444" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/gradient_card.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_bio.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_close_black_24dp.xml" value="0.2703125" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/drawable/ic_dot_24dp.xml" value="0.2703125" />
@@ -58,6 +46,7 @@
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/item_news.xml" value="0.1" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/items.xml" value="0.2" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/list_row.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/list_view_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/single_view_item.xml" value="0.264" />
       </map>
     </option>
@@ -67,5 +56,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.25416666666666665" />
+      </ProjectState>
+    </option>
   </component>
 </project>

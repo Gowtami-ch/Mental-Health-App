@@ -99,6 +99,10 @@
             android:exported="true"
             android:label="Calendar"
             android:parentActivityName=".JournalActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
