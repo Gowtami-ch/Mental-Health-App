@@ -1,5 +1,7 @@
 package com.example.mentalhealthapp;
 
+import static android.service.controls.ControlsProviderService.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -27,61 +29,57 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
         Intent intent = getIntent();
-        String score = intent.getStringExtra(QuizActivity.EXTRA_SCORE);
-//        String score1="";
-//        String score2="";
-//        String score3="";
-//        String score4="";
-//        String score5="";
-//        String score6="";
-//        String score7="";
-//        String score8="";
+        String score = intent.getStringExtra(QuizActivity.EXTRA_SCORE), score0 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_0),score1=intent.getStringExtra(QuizActivity.EXTRA_SCORE_1), score2 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_2),
+                score3 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_3), score4 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_4), score5 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_5),
+                score6 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_6), score7 = intent.getStringExtra(QuizActivity.EXTRA_SCORE_7);
+        System.out.println(score0+" "+score1+" "+score2+" "+score3+" "+score4+" "+score5+" "+score6+" "+score7+" ");
         int sc=Integer.parseInt(score);
-//        int sc1=Integer.parseInt(score1);
-//        int sc2=Integer.parseInt(score2);
-//        int sc3=Integer.parseInt(score3);
-//        int sc4=Integer.parseInt(score4);
-//        int sc5=Integer.parseInt(score5);
-//        int sc6=Integer.parseInt(score6);
-//        int sc7=Integer.parseInt(score7);
-//        int sc8=Integer.parseInt(score8);
+        int sc1=Integer.parseInt(score0);
+        int sc2=Integer.parseInt(score1);
+        int sc3=Integer.parseInt(score2);
+        int sc4=Integer.parseInt(score3);
+        int sc5=Integer.parseInt(score4);
+        int sc6=Integer.parseInt(score5);
+        int sc7=Integer.parseInt(score6);
+        int sc8=Integer.parseInt(score7);
         pb1 = (RoundedHorizontalProgressBar) findViewById(R.id.pb1);
-//        pbc1 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc1);
-//        pbc2= (RoundedHorizontalProgressBar) findViewById(R.id.pbc2);
-//        pbc3= (RoundedHorizontalProgressBar) findViewById(R.id.pbc3);
-//        pbc4 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc4);
-//        pbc5 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc5);
-//        pbc6 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc6);
-//        pbc7 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc7);
-//        pbc8 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc8);
+        pbc1 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc1);
+        pbc2= (RoundedHorizontalProgressBar) findViewById(R.id.pbc2);
+        pbc3= (RoundedHorizontalProgressBar) findViewById(R.id.pbc3);
+        pbc4 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc4);
+        pbc5 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc5);
+        pbc6 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc6);
+        pbc7 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc7);
+        pbc8 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc8);
+        int scp1=sc1*100/12,scp2=sc2*100/12,scp3=sc3*100/12,scp4=sc4*100/12,scp5=sc5*100/12,scp6=sc6*100/12,scp7=sc7*100/16,scp8=sc8*100/12;
         pb1.setProgress(sc);
-//        pbc1.setProgress(sc1);
-//        pbc2.setProgress(sc2);
-//        pbc3.setProgress(sc3);
-//        pbc4.setProgress(sc4);
-//        pbc5.setProgress(sc5);
-//        pbc6.setProgress(sc6);
-//        pbc7.setProgress(sc7);
-//        pbc8.setProgress(sc8);
+        pbc1.setProgress(scp1);
+        pbc2.setProgress(scp2);
+        pbc3.setProgress(scp3);
+        pbc4.setProgress(scp4);
+        pbc5.setProgress(scp5);
+        pbc6.setProgress(scp6);
+        pbc7.setProgress(scp7);
+        pbc8.setProgress(scp8);
         pb1.animateProgress(1000,0,sc);
-//        pbc1.animateProgress(1000,0,sc1);
-//        pbc2.animateProgress(1000,0,sc2);
-//        pbc3.animateProgress(1000,0,sc3);
-//        pbc4.animateProgress(1000,0,sc4);
-//        pbc5.animateProgress(1000,0,sc5);
-//        pbc6.animateProgress(1000,0,sc6);
-//        pbc7.animateProgress(1000,0,sc7);
-//        pbc8.animateProgress(1000,0,sc8);
+        pbc1.animateProgress(1000,0,scp1);
+        pbc2.animateProgress(1000,0,scp2);
+        pbc3.animateProgress(1000,0,scp3);
+        pbc4.animateProgress(1000,0,scp4);
+        pbc5.animateProgress(1000,0,scp5);
+        pbc6.animateProgress(1000,0,scp6);
+        pbc7.animateProgress(1000,0,scp7);
+        pbc8.animateProgress(1000,0,scp8);
        done = findViewById(R.id.done);
         tv3 = findViewById(R.id.tv3);
         String status="";
-        if(sc>=0&&sc<15)
+        if(sc>=0&&sc<20)
           status="Very Low";
-        else if(sc>=15&&sc<25)
+        else if(sc>=20&&sc<40)
            status="Low";
-        else if(sc>=25&&sc<35)
+        else if(sc>=40&&sc<60)
             status="Moderate";
-        else if(sc>=35&&sc<50)
+        else if(sc>=60&&sc<80)
             status="High";
         else
             status="Very High";
