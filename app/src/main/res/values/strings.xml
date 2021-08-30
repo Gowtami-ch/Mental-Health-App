@@ -21,5 +21,13 @@
         <item>Create a to do list</item>
         <item>View Quiz Statistics</item>
     </array>
+    
+        <string name="c1">Well Being and Ill Being</string>
+        <string name="c2">Physical Health</string>
+        <string name="c3">Control, Autonomy and Choice</string>
+        <string name="c4">Self-Perception</string>
+        <string name="c5">Relationships and Belonging</string>
+        <string name="c6">Activity</string>
+        <string name="c7">Hope and Hopelessness</string>
 
 </resources>

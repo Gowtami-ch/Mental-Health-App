@@ -3,6 +3,7 @@ package com.example.mentalhealthapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -12,9 +13,15 @@ import android.widget.TextView;
 
 import com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ScoreActivity extends AppCompatActivity {
     TextView tv3;
     Button done;
+    QuizDetails quiz;
+    QuizDatabase quizDb;
 
 //    ProgressBar pbc1;
 //    ProgressBar pbc2;
@@ -51,6 +58,16 @@ public class ScoreActivity extends AppCompatActivity {
         int sc6=Integer.parseInt(score5);
         int sc7=Integer.parseInt(score6);
         int sc8=Integer.parseInt(score7);
+        int []arr= {sc1,sc2,sc3,sc4,sc5,sc6,sc7,sc8};
+
+        Date date = new Date();
+        DateFormat dtf=new SimpleDateFormat("yyyy/MM/dd");
+        String x=dtf.format(date);
+
+        quiz=new QuizDetails(sc,arr,getDateHash(x));
+        quizDb=new QuizDatabase(ScoreActivity.this);
+        quizDb.addNewQuiz(quiz);
+
 //        pb1 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc1);
         pbc1 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc1);
         pbc2= (RoundedHorizontalProgressBar) findViewById(R.id.pbc2);
@@ -103,7 +120,7 @@ public class ScoreActivity extends AppCompatActivity {
         pbc8.animateProgress(1000,0,scp8);
        done = findViewById(R.id.done);
         tv3 = findViewById(R.id.tv3);
-        String status="";
+        String status;
         if(sc>=0&&sc<20)
           status="Very Low";
         else if(sc>=20&&sc<40)
@@ -119,9 +136,22 @@ public class ScoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(ScoreActivity.this,MainActivity.class);
-                intent.setFlags( intent.FLAG_ACTIVITY_NEW_TASK |intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK |intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
         });
+    }
+
+    private int getDateHash(String x){
+        int day,month,year;
+        try{
+            day = Integer.parseInt(x.substring(8, 10));
+            month = Integer.parseInt(x.substring(5, 7));
+            year = Integer.parseInt(x.substring(0, 4));
+            return year*31*12 + month*31 + day;
+        }
+        catch(Exception e){
+            return -1;
+        }
     }
 }
