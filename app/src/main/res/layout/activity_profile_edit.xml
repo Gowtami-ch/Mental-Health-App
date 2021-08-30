@@ -1,78 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ProfileEditActivity"
-    android:gravity="center">
+    tools:context=".ProfileEditActivity">
 
     <TextView
+        android:id="@+id/nText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Profile"
-        android:textColor="@android:color/holo_red_light"
-        android:textSize="20sp"
-        android:textAlignment="center"
+        android:layout_margin="10dp"
         android:gravity="center_horizontal"
-        android:layout_margin="10dp" />
+        android:text="Create Profile"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="20sp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:cardPreventCornerOverlap="false"
-        app:cardCornerRadius="75dp" >
+        app:cardCornerRadius="75dp"
+        app:cardPreventCornerOverlap="false">
+
         <ImageView
+            android:id="@+id/iv_cp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/iv_cp"
-            android:scaleType="fitCenter"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:scaleType="fitCenter" />
     </androidx.cardview.widget.CardView>
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="User Name"
         android:id="@+id/tvNameProfile"
-        android:layout_margin="4dp"
-        android:paddingStart="5dp"
-        android:drawablePadding="7dp"
-        android:drawableLeft="@drawable/ic_name"
-        android:textColor="@android:color/black"/>
-    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:drawableLeft="@drawable/ic_name"
+        android:drawablePadding="7dp"
+        android:hint="User Name"
+        android:paddingStart="5dp"
+        android:textColor="@color/dimgray" />
+
+    <EditText
+        android:id="@+id/tvBioProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:drawableLeft="@drawable/ic_bio"
+        android:drawablePadding="7dp"
         android:hint="Bio"
         android:paddingStart="5dp"
-        android:drawablePadding="7dp"
-        android:drawableLeft="@drawable/ic_bio"
-        android:id="@+id/tvBioProfile"
-        android:layout_margin="4dp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@color/gray" />
 
     <EditText
         android:id="@+id/et_password_cp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:textColor="@android:color/black"
-        android:paddingStart="5dp"
-        android:drawablePadding="7dp"
+        android:layout_margin="4dp"
         android:drawableLeft="@drawable/ic_password"
+        android:drawablePadding="7dp"
+        android:ems="10"
         android:hint="Password"
-        android:layout_margin="4dp"/>
+        android:inputType="textPassword"
+        android:paddingStart="5dp"
+        android:textColor="@color/gray" />
 
     <Button
+        android:id="@+id/btnProfileSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Profile"
         android:layout_margin="10dp"
         android:background="@android:color/holo_red_light"
+        android:text="Save Profile"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:id="@+id/btnProfileSave"/>
+        android:textSize="20sp" />
 
 </LinearLayout>
