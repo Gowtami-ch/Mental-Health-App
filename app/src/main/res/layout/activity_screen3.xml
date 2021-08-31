@@ -53,8 +53,8 @@
 
     <TextView
         android:id="@+id/textViewh"
-        android:layout_width="372dp"
-        android:layout_height="50dp"
+        android:layout_width="377dp"
+        android:layout_height="66dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="serif"
@@ -70,8 +70,8 @@
 
     <Button
         android:id="@+id/donebtn"
-        android:layout_width="151dp"
-        android:layout_height="48dp"
+        android:layout_width="155dp"
+        android:layout_height="52dp"
         android:layout_marginBottom="56dp"
         android:background="@drawable/roundbutton"
         android:text="Get Started"
