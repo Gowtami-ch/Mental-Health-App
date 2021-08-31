@@ -48,9 +48,7 @@
 mental health test scores you took till now. You can see your category wise
 score with the help of the colors."/>
         </LinearLayout>
-
-
-
+        
 
     </androidx.cardview.widget.CardView>
 
