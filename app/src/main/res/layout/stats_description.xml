@@ -46,9 +46,9 @@
                 android:padding="10dp"
                 android:text="This is the statistics of your
 mental health test scores you took till now. You can see your category wise
-score with the help of the colors."/>
+scores with the help of the colors."/>
         </LinearLayout>
-        
+
 
     </androidx.cardview.widget.CardView>
 
