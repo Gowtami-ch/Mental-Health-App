@@ -9,11 +9,11 @@ Cs19B008 - Roopa Sree
 Our app serves as a user feedback system for self-management and maintaining good mental health of every individual. One can assess their mental health by taking our mental health (self-assessment) test. This test gives the user’s overall mental health score on a scale of hundred and also gives the scores of their wellbeing and illbeing, physical health, relationships and belonging, self-perception etc. The users can check their daily/weekly scores and see the statistics of their scores as well. This app encourages users to maintain an emotion journal so that they can identify what is causing them to feel stressed or anxious. It also encourages the users to create a to-do list and help them in self-management. The app provides an option to read good news articles and some wholesome memes for recreation. This app can be revisited every day, to keep oneself occupied with his goals and not fall into the stress holes created by the world around him.
 ## Contents
 
-- [Mental health assessment test](#memes)
+- [Mental health assessment test]
 - Emotion Journal
 - To-do List
-- News Articles
-- Memes
+- [News Articles]()
+- [Memes](### memes)
 
 ## User Guide:
 
