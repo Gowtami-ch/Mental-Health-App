@@ -1,9 +1,10 @@
 # Mental-Health-App
 ## Team 4
-CS19B046 - [Githin](https://github.com/GithinGeorge2k1)\
-CS19B010 - [Gowtami](https://github.com/CS19B010Gowtami)\
-CS19B011 - [Sahithi Rani](https://github.com/SahithiRani)\
-Cs19B008 - [Roopa Sree](https://github.com/roopasree123)
+CS19B046 -<a href="https://github.com/GithinGeorge2k1" target="_blank">Githin</a>\
+CS19B010 -<a href="https://github.com/CS19B010Gowtami" target="_blank">Gowtami</a>\
+CS19B011 -<a href="https://github.com/SahithiRani" target="_blank">Sahithi Rani</a>\
+CS19B008 -<a href="https://github.com/roopasree123" target="_blank">Roopa Sree</a>
+
 ## Introduction
 >Dealing with mental health is what makes us human. But for a lot of us, it's a struggle to be open about it. Even if we are open about it, there is a global shortage of psychiatrists and lack of mental health care access in rural regions. In this context, we feel that apps can serve as a viable tool to bridge the mental health treatment gap.
 Our app serves as a user feedback system for self-management and maintaining good mental health of every individual. One can assess their mental health by taking our mental health (self-assessment) test. This test gives the user’s overall mental health score on a scale of hundred and also gives the scores of their wellbeing and illbeing, physical health, relationships and belonging, self-perception etc. The users can check their daily/weekly scores and see the statistics of their scores as well. This app encourages users to maintain an emotion journal so that they can identify what is causing them to feel stressed or anxious. It also encourages the users to create a to-do list and help them in self-management. The app provides an option to read good news articles and some wholesome memes for recreation. This app can be revisited every day, to keep oneself occupied with his goals and not fall into the stress holes created by the world around him.
