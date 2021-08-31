@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorIntroSlide3Background">#3B6DB2</color>
+    <color name="colorIntroSlide4Background">#CC8A2D</color>
     <color name="colorPrimary">#F13374</color>
     <color name="colorPrimaryDar">#F13374</color>
     <color name="colorAccent">#F13374</color>
@@ -76,7 +78,7 @@
     <color name="peru">#CD853F</color>
     <color name="indianred">#CD5C5C</color>
     <color name="mediumvioletred">#C71585</color>
-    <color name="silver">#2E7DBC</color>
+    <color name="silver">#C0C0C0</color>
     <color name="darkkhaki">#BDB76B</color>
     <color name="rosybrown">#BC8F8F</color>
     <color name="mediumorchid">#BA55D3</color>
