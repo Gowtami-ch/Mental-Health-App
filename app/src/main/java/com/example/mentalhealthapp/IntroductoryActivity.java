@@ -13,16 +13,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class IntroductoryActivity extends AppCompatActivity
 {
     FloatingActionButton fabi;
-    ImageView pinkbg;
-    LottieAnimationView lottie;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_introductory);
-        pinkbg=findViewById(R.id.pinkbg);
-        lottie=findViewById(R.id.lottie);
-        pinkbg.animate().translationY(-1600).setDuration(1000).setStartDelay(4000);
-        lottie.animate().translationY(1400).setDuration(1000).setStartDelay(4000);
         fabi = findViewById(R.id.fabi);
         fabi.setOnClickListener(new View.OnClickListener() {
             @Override
