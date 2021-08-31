@@ -24,6 +24,14 @@
             android:layout_marginLeft="10dp"
             android:background="@color/white"
             android:padding="10dp"/>
+        <Button
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:padding="10dp"
+            android:background="@drawable/ic_dot_24dp"
+            android:id="@+id/aboutUs"/>
 
 
     </LinearLayout>

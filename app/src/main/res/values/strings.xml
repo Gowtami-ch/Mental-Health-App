@@ -14,12 +14,14 @@
     <string name="profile">Profile</string>
     <array name="cardtext">
         <!--        <item>Create or update your profile</item>-->
-        <item>Take our quiz and assess your mental health</item>
-        <item>Read some news articles</item>
-        <item>Watch some funny memes</item>
-        <item>Write your Emotion Journal</item>
-        <item>Create a to do list</item>
-        <item>View Quiz Statistics</item>
+        <item>Take our Mental Health Self Assessment Test to know about your mental health. Answer all the questions honestly.</item>
+        <item>A good article is like a wholesome healthy meal for your brain and mental well-being. So check out some latest news and feed
+            your brain.</item>
+        <item>Watch some wholesome memes and share them with your family and friends.</item>
+        <item>Journaling helps control your symptoms and improve your mood by helping you prioritize problems, fears and concerns. Write your emotion journal now.</item>
+        <item>Writing things down helps reduce stress and feel more relaxed. You get a feeling of being in control of your life and actions.
+            Create a to do list now.</item>
+        <item>View your previous Mental Health Test scores and their statistics and draw conclusions from them.</item>
     </array>
     
         <string name="c1">Well Being and Ill Being</string>
