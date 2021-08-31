@@ -4,24 +4,34 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class ProfileActivity extends AppCompatActivity {
 
     private Button btnEdit,btnBack;
     private TextView tvName,tvBio;
-
-
+    private ImageView image;
+  //  public static final String SHARED_PREFS="sharedPrefs";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +42,9 @@ public class ProfileActivity extends AppCompatActivity {
         btnEdit=findViewById(R.id.btnProfileEdit);
         tvName=findViewById(R.id.tvNameProfile);
         tvBio=findViewById(R.id.tvBioProfile);
-        
+        image=findViewById(R.id.iv_cp);
+
+
         SharedPreferences sharedPreferences=
                 PreferenceManager.getDefaultSharedPreferences(ProfileActivity.this);
         try{
@@ -41,6 +53,8 @@ public class ProfileActivity extends AppCompatActivity {
             Toast.makeText(ProfileActivity.this,"Got Prefs",Toast.LENGTH_SHORT).show();
             String txtBio = sharedPreferences.getString("bio", "One");
             tvBio.setText(txtBio);
+
+
         }
         catch(Exception e){
 
@@ -61,10 +75,16 @@ public class ProfileActivity extends AppCompatActivity {
                     public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK){
                             Intent data=result.getData();
+                            String text =data.getStringExtra(ProfileEditActivity.EXTRA_TEXT);
+
+                            Glide.with(ProfileActivity.this).load(text).into(image);
+
                             String Name = data.getStringExtra("Name");
                             String Bio = data.getStringExtra("Bio");
+                           // String str = data.getStringExtra("str");
                             tvName.setText(String.valueOf(Name));
                             tvBio.setText(String.valueOf(Bio));
+
                         }
                     }
                 });
@@ -75,6 +95,7 @@ public class ProfileActivity extends AppCompatActivity {
                 Intent intent =new Intent(ProfileActivity.this,ProfileEditActivity.class);
                 intent.putExtra("Name",tvName.getText().toString());
                 intent.putExtra("Bio",tvBio.getText().toString());
+
                 launchSomeActivity.launch(intent);
             }
         });
@@ -97,6 +118,7 @@ public class ProfileActivity extends AppCompatActivity {
         SharedPreferences.Editor editor =sharedPreferences.edit();
         editor.putString("TEXT", tvName.getText().toString());
         editor.putString("bio", tvBio.getText().toString());
+
 //        editor.putString("Text", Text);
         editor.apply();
 
