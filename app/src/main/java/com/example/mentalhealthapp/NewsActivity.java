@@ -29,7 +29,7 @@ public class NewsActivity extends AppCompatActivity {
     SwipeRefreshLayout swipeRefreshLayout;
     RecyclerView recyclerView;
     EditText etQuery;
-    Button btnSearch;
+    Button btnSearch, btnAboutUs;
     Dialog dialog;
     final String API_KEY = "2347c78edf3d4c3c82ea9ccbe1e87c10";
     Adapter adapter;
@@ -44,6 +44,7 @@ public class NewsActivity extends AppCompatActivity {
         swipeRefreshLayout = findViewById(R.id.swipeRefresh);
         etQuery = findViewById(R.id.etQuery);
         btnSearch = findViewById(R.id.btnSearch);
+        btnAboutUs = findViewById(R.id.aboutUs);
         dialog = new Dialog(NewsActivity.this);
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -78,6 +79,12 @@ public class NewsActivity extends AppCompatActivity {
                     });
                     retrieveJson("",country,API_KEY);
                 }
+            }
+        });
+        btnAboutUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
             }
         });
 
@@ -118,6 +125,18 @@ public class NewsActivity extends AppCompatActivity {
         String country = locale.getCountry();
         return country.toLowerCase();
     }
+    public void showDialog(){
+        Button btnClose;
+        dialog.setContentView(R.layout.about_us_pop_up);
+        dialog.show();
+        btnClose = dialog.findViewById(R.id.close);
 
+        btnClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
 
 }
