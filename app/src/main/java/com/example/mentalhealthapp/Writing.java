@@ -47,13 +47,14 @@ public class Writing extends AppCompatActivity {
                     if (!noteTitle.getText().toString().equals("") && !noteDetails.getText().toString().equals("")) {
                         db.addNewJournal(new JournalEntry(noteTitle.getText().toString(),
                                 noteDetails.getText().toString(), day, month, year));
+                        clear();
+                        Intent intent = new Intent(Writing.this, JournalActivity.class);
+                        startActivity(intent);
                     } else {
                         Toast.makeText(Writing.this, "Fill in the fields",
                                 Toast.LENGTH_SHORT).show();
                     }
-                    clear();
-                    Intent intent = new Intent(Writing.this, JournalActivity.class);
-                    startActivity(intent);
+
                 } catch (Exception e) {
                     Toast.makeText(Writing.this, "Exception", Toast.LENGTH_SHORT).show();
                 }
