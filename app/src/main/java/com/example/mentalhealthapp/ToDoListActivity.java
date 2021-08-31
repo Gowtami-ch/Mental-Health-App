@@ -43,13 +43,13 @@ public class ToDoListActivity extends AppCompatActivity {
         listView = findViewById(R.id.id_list_view);
 
         listView.setAdapter(arrayAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-           public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                TextView textView =(TextView ) view;
-                textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-            }
-        });
+//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//           public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                TextView textView =(TextView ) view;
+//                textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+//            }
+//        });
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override

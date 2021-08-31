@@ -17,26 +17,27 @@ public class quizStatistics extends AppCompatActivity {
 
     BarChart barChart;
     ArrayList<QuizDetails> quizDetails=new ArrayList<>();
+    QuizDatabase quizDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_statistics);
 
+        quizDb=new QuizDatabase(quizStatistics.this);
+        quizDetails=quizDb.getQuizEntries();
+
         barChart=findViewById(R.id.barGraph);
         barChart.setNoDataText("You Have Taken No Quizzes:(");
         barChart.setLogEnabled(false);
 
         ArrayList<BarEntry> barEntries=new ArrayList<>();
-        barEntries.add(new BarEntry(2001,20));
-        barEntries.add(new BarEntry(2002,40));
-        barEntries.add(new BarEntry(2003,40));
-        barEntries.add(new BarEntry(2004,40));
-        barEntries.add(new BarEntry(2005,40));
-        barEntries.add(new BarEntry(2006,40));
-        barEntries.add(new BarEntry(2007,40));
-        barEntries.add(new BarEntry(2008,40));
-        barEntries.add(new BarEntry(2009,40));
+//        barEntries.add(new BarEntry(2001,20));
+
+        for(int i=0;i<quizDetails.size();i++){
+            barEntries.add(new BarEntry(i,quizDetails.get(i).getQuizScoreTotal()));
+        }
+
 
         BarDataSet barDataSet=new BarDataSet(barEntries,"Your Quiz Statistics!!!");
         barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
@@ -46,10 +47,10 @@ public class quizStatistics extends AppCompatActivity {
         BarData barData=new BarData(barDataSet);
 
 
-        barChart.setFitBars(true);
+//        barChart.setFitBars(false);
         barChart.setData(barData);
         barChart.getDescription().setText("Bar Chart For Quiz Activity");
-        barChart.animateY(2000);
+        barChart.animateY(4000);
 
     }
 }

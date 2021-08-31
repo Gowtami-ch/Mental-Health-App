@@ -30,11 +30,11 @@
         android:id="@+id/nextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-       android:onClick="nextMeme"
         android:background="@color/colorPrimary"
+        android:onClick="nextMeme"
         android:padding="32dp"
         android:text="@string/next1"
-        android:textColor="#EC407A"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/guideline"
         app:layout_constraintRight_toRightOf="parent" />
@@ -46,11 +46,11 @@
         android:background="@color/colorAccent"
         android:onClick="ShareMeme"
         android:padding="32dp"
-        android:textColor="@color/colorPrimaryDar"
         android:text="@string/share"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/guideline"/>
+        app:layout_constraintRight_toLeftOf="@id/guideline" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
