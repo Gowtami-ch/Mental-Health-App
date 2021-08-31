@@ -10,13 +10,13 @@ CS19B008 -<a href="https://github.com/roopasree123" target="_blank">Roopa Sree</
 Our app serves as a user feedback system for self-management and maintaining good mental health of every individual. One can assess their mental health by taking our mental health (self-assessment) test. This test gives the user’s overall mental health score on a scale of hundred and also gives the scores of their wellbeing and illbeing, physical health, relationships and belonging, self-perception etc. The users can check their daily/weekly scores and see the statistics of their scores as well. This app encourages users to maintain an emotion journal so that they can identify what is causing them to feel stressed or anxious. It also encourages the users to create a to-do list and help them in self-management. The app provides an option to read good news articles and some wholesome memes for recreation. This app can be revisited every day, to keep oneself occupied with his goals and not fall into the stress holes created by the world around him.
 
 ## Setting up the project
-> Install `git` if you do not already have it installed from [here](https://git-scm.com/).
+ ``` Install `git` if you do not already have it installed from [here](https://git-scm.com/).
 
 Once installed, open a terminal and run the following command to clone the repository into the current directory. You may be asked to enter your username/password. If so, just enter your GitHub username and password.
 
 `git clone https://github.com/SE-Project-Team/Mental-Health-App.git`
 
-This will create a new directory named `Mental-Health-App`. To import the project into Android Studio, open Android Studio then hit `File` > `Open` then choose the new directory that was created.
+This will create a new directory named `Mental-Health-App`. To import the project into Android Studio, open Android Studio then hit `File` > `Open` then choose the new directory that was created.```
 
 ## Set up a virtual device using AVD
 
