@@ -29,5 +29,7 @@
         <string name="c5">Relationships and Belonging</string>
         <string name="c6">Activity</string>
         <string name="c7">Hope and Hopelessness</string>
+        <string name="c8">Stress and Anxiety</string>
+        <string name="cTotal">Total Score(Out of 100)</string>
 
 </resources>

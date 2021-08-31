@@ -60,7 +60,7 @@ public class QuizDatabase extends SQLiteOpenHelper {
         Cursor cursor=db.rawQuery("SELECT * FROM "+DATABASE_TABLE,null);
         if(cursor.moveToFirst()){
             do{
-                int []arr={cursor.getInt(2),cursor.getInt(3),
+                float []arr={cursor.getInt(2),cursor.getInt(3),
                         cursor.getInt(4),cursor.getInt(5),cursor.getInt(6),cursor.getInt(7),
                         cursor.getInt(8),cursor.getInt(9)};
                 quizEntries.add(new QuizDetails(cursor.getInt(1),arr,cursor.getInt(10)));
