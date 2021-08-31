@@ -2,10 +2,10 @@ package com.example.mentalhealthapp;
 
 public class QuizDetails {
     private int quizScoreTotal;
-    private int[] categoryScores;
+    private float[] categoryScores;
     private int quizDateHash;
 
-    public QuizDetails(int quizScoreTotal, int[] categoryScores, int quizDateHash) {
+    public QuizDetails(int quizScoreTotal, float[] categoryScores, int quizDateHash) {
         this.quizScoreTotal = quizScoreTotal;
         this.categoryScores = categoryScores;
         this.quizDateHash = quizDateHash;
@@ -19,11 +19,11 @@ public class QuizDetails {
         this.quizScoreTotal = quizScoreTotal;
     }
 
-    public int[] getCategoryScores() {
+    public float[] getCategoryScores() {
         return categoryScores;
     }
 
-    public void setCategoryScores(int[] categoryScores) {
+    public void setCategoryScores(float[] categoryScores) {
         this.categoryScores = categoryScores;
     }
 

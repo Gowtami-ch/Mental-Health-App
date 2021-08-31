@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalHealthApp">
         <activity
-            android:name=".quizStatistics"
+            android:name=".QuizStatistics"
             android:exported="true"
             android:parentActivityName=".MainActivity"/>
         <activity

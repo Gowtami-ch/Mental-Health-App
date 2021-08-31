@@ -12,9 +12,8 @@ public class JournalView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journal_view);
-        //TODO MAYBE ADD A MENU FOR EDIT AND DELETE..
         title=findViewById(R.id.jViewTitle);
-        content=findViewById(R.id.jViewContent);
+        content=findViewById(R.id.jViewContent1);
         Intent intent=getIntent();
         title.setText(intent.getStringExtra("title"));
         content.setText(intent.getStringExtra("content"));
