@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ProfileEditActivity"
-    android:gravity="center">
+    tools:context=".ProfileEditActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -22,14 +21,15 @@
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:cardPreventCornerOverlap="false"
-        app:cardCornerRadius="75dp" >
+        app:cardCornerRadius="75dp"
+        app:cardPreventCornerOverlap="false">
+
         <ImageView
+            android:id="@+id/iv_cp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/iv_cp"
-            android:scaleType="fitCenter"
-            android:clickable="true"/>
+            android:clickable="true"
+            android:scaleType="fitCenter" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -56,21 +56,23 @@
 
     <Button
         android:id="@+id/btnProfileEdit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="@android:color/holo_red_light"
+        android:background="@drawable/roundbutton"
         android:text="Edit"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnProfileBack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="@android:color/holo_red_light"
+        android:background="@drawable/roundbutton"
         android:text="Back"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
 
