@@ -10,10 +10,10 @@ Our app serves as a user feedback system for self-management and maintaining goo
 ## Contents
 
 - [Mental health assessment test](#mental-health-assessment-test)
-- [Emotion Journal]()
+- [Emotion Journal](#emotion-journal)
 - [To-do List]()
-- [News Articles]()
-- [Memes]()
+- [News Articles](#news-articles)
+- [Memes](#memes)
 
 ## User Guide
 
