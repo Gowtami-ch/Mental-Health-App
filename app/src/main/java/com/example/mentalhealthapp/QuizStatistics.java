@@ -45,7 +45,7 @@ public class QuizStatistics extends AppCompatActivity {
         ArrayList<BarEntry> barEntries=new ArrayList<>();
 //        barEntries.add(new BarEntry(2001,20));
 
-
+        
         for(int i=0;i<quizDetails.size();i++){
             float []arr=quizDetails.get(i).getCategoryScores();
             barEntries.add(new BarEntry(i,arr));
