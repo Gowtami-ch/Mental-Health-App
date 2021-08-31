@@ -45,7 +45,7 @@ This will create a new directory named `Mental-Health-App`. To import the projec
 
 ## Contents
 
-- [Mental health assessment test](#mental-health-assessment-test)
+- [Mental Health Self Assessment test](#mental-health-self-assessment-test)
 - [Emotion Journal](#emotion-journal)
 - [To-do List](#to-do-list)
 - [News Articles](#news-articles)
@@ -53,7 +53,7 @@ This will create a new directory named `Mental-Health-App`. To import the projec
 
 ## User Guide
 
-### Mental health assessment test
+### Mental Health Self Assessment test
 > Through our app users can take the mental health self-assessment test daily or weekly. This test comprises of 25 questions covering various aspects like wellbeing and illbeing, physical health, relationships and belonging, self-perception, hope and hopelessness etc. After completing the test, the app gives a detailed report of their scores in all the above stated aspects of their mental health. It also displays the stress and anxiety levels of the users. Based on these results, the users can understand in which aspects they should focus on and take care of in order to improve their mental health. The app also keeps track of the scores of the users and provides the statistics of the scores. So, the users can check on which day their score was good or bad and draw various results from these statistics.
 
 ### Emotion Journal
