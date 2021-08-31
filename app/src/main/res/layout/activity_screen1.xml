@@ -18,14 +18,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.109"
         app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         app:lottie_rawRes="@raw/health2gif" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="276dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="288dp"
         android:text="Mental-Health"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -40,8 +41,8 @@
         android:layout_marginEnd="280dp"
         android:layout_marginBottom="352dp"
         android:fontFamily="sans-serif-light"
-        android:textColor="@color/black"
         android:text="Feel"
+        android:textColor="@color/black"
         android:textSize="42sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,8 +72,8 @@
         android:layout_height="0dp"
         android:layout_marginTop="5dp"
         android:text="Lets get through  this together"
-        android:textSize="16sp"
         android:textColor="@android:color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".1"
@@ -93,17 +94,32 @@
         app:layout_constraintStart_toStartOf="@id/txtDesc"
         app:layout_constraintTop_toBottomOf="@id/txtDesc"
         app:layout_constraintVertical_bias=".6" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/holo_purple"
-        android:id="@+id/fab1"
-        android:src="@drawable/ic_baseline_navigate_next_24"
-        app:layout_constraintVertical_bias="1"
-        app:layout_constraintHorizontal_bias="1"
         android:layout_margin="16dp"
+        android:backgroundTint="@android:color/holo_purple"
+        android:src="@drawable/ic_baseline_navigate_next_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <TextView
+        android:id="@+id/skip1"
+        android:layout_width="64dp"
+        android:layout_height="34dp"
+        android:text="skip>>"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.865"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
 </androidx.constraintlayout.widget.ConstraintLayout>

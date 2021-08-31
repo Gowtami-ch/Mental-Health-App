@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorIntroSlide3Background"
+    android:background="#1C4E3B"
     android:orientation="vertical">
 
     <TextView
@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="sans-serif-thin"
-        android:text="Journal"
-        android:textColor="@color/white"
+        android:text="Resources"
+        android:textColor="@color/whitesmoke"
         android:textSize="35sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,49 +32,34 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:srcCompat="@drawable/ic_intro_slide3" />
+        app:srcCompat="@drawable/ic_intro_slide5" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
+        android:layout_width="234dp"
+        android:layout_height="52dp"
         android:layout_gravity="center"
         android:fontFamily="sans-serif"
-        android:text="Use the journal to write more detailed information about how you are feeling"
+        android:text="Get articles and memes that can help improve your mood"
         android:textAlignment="center"
         android:textColor="@color/whitesmoke"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/fab3"
+        app:layout_constraintBottom_toTopOf="@+id/donebtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/pink"
-        android:src="@drawable/ic_baseline_navigate_next_24"
+    <Button
+        android:id="@+id/donebtn"
+        android:layout_width="155dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/roundbutton"
+        android:text="Get Started"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.954"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/skip3"
-        android:layout_width="68dp"
-        android:layout_height="32dp"
-        android:text="skip>>"
-        android:textSize="18dp"
-        android:textColor="@color/whitesmoke"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.06" />
+        app:layout_constraintVertical_bias="0.626" />
 </androidx.constraintlayout.widget.ConstraintLayout>
