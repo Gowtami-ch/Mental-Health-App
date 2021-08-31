@@ -1,9 +1,16 @@
 package com.example.mentalhealthapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.Legend;
@@ -20,6 +27,7 @@ public class QuizStatistics extends AppCompatActivity {
     BarChart barChart;
     ArrayList<QuizDetails> quizDetails=new ArrayList<>();
     QuizDatabase quizDb;
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +36,7 @@ public class QuizStatistics extends AppCompatActivity {
 
         quizDb=new QuizDatabase(QuizStatistics.this);
         quizDetails=quizDb.getQuizEntries();
+        dialog = new Dialog(QuizStatistics.this);
 
         barChart=findViewById(R.id.barGraph);
         barChart.setNoDataText("You Have Taken No Quizzes:(");
@@ -95,5 +104,31 @@ public class QuizStatistics extends AppCompatActivity {
         l.setWordWrapEnabled(true);
         barChart.animateY(1000);
 
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.explanation,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.Explanation:
+                Button btnClose;
+                dialog.setContentView(R.layout.stats_description);
+                dialog.show();
+                btnClose = dialog.findViewById(R.id.close3);
+
+                btnClose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
