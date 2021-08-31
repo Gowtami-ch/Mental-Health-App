@@ -3,5 +3,7 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/abhaya_libre</item>
         <item>@font/annie_use_your_telescope</item>
+        <item>@font/armata</item>
+        <item>@font/average_sans</item>
     </array>
 </resources>
