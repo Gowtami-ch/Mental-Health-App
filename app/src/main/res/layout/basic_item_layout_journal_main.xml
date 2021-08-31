@@ -20,8 +20,9 @@
             android:id="@+id/txtTitleOfDiary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/annie_use_your_telescope"
             android:text="Title"
-            android:textSize="20dp"
+            android:textSize="22sp"
             android:textStyle="bold" />
 
         <TextView
@@ -29,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtTitleOfDiary"
+            android:fontFamily="@font/annie_use_your_telescope"
             android:maxHeight="200dp"
             android:maxLines="5"
             android:overScrollMode="never"

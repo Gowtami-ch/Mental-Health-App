@@ -13,7 +13,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
 
-public class quizStatistics extends AppCompatActivity {
+public class QuizStatistics extends AppCompatActivity {
 
     BarChart barChart;
     ArrayList<QuizDetails> quizDetails=new ArrayList<>();
@@ -24,7 +24,7 @@ public class quizStatistics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_statistics);
 
-        quizDb=new QuizDatabase(quizStatistics.this);
+        quizDb=new QuizDatabase(QuizStatistics.this);
         quizDetails=quizDb.getQuizEntries();
 
         barChart=findViewById(R.id.barGraph);
