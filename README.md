@@ -11,7 +11,7 @@ Our app serves as a user feedback system for self-management and maintaining goo
 
 - [Mental health assessment test](#mental-health-assessment-test)
 - [Emotion Journal](#emotion-journal)
-- [To-do List]()
+- [To-do List](#to-do-list)
 - [News Articles](#news-articles)
 - [Memes](#memes)
 
