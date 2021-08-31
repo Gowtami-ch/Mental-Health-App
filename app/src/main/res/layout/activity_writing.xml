@@ -5,7 +5,7 @@
     android:id="@+id/diaryTitle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6E2"
+    android:background="@drawable/img_writing"
     tools:context=".Writing">
 
 
@@ -13,12 +13,19 @@
         android:id="@+id/jViewContent"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
         android:background="@null"
         android:ems="10"
+        android:fontFamily="@font/annie_use_your_telescope"
         android:gravity="start|top"
         android:hint="  Write Your Journel"
         android:inputType="textMultiLine"
         android:isScrollContainer="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/jViewTitle"
         app:layout_constraintStart_toStartOf="@+id/jViewTitle"
@@ -28,24 +35,32 @@
         android:id="@+id/jViewTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="5dp"
+        android:layout_marginEnd="7dp"
         android:ems="10"
-        android:hint="  Title"
+        android:fontFamily="@font/annie_use_your_telescope"
+        android:hint="Title"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jViewHeading" />
+        app:layout_constraintTop_toBottomOf="@+id/jViewHeading"
+        android:textSize="28sp"/>
 
     <TextView
         android:id="@+id/jViewHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/almendra_sc"
         android:padding="5dp"
         android:text="Enter Your New Journal Here"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.04000002" />
@@ -74,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="280dp" />
+        app:layout_constraintGuide_end="123dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -53,8 +53,6 @@ public class ProfileActivity extends AppCompatActivity {
             Toast.makeText(ProfileActivity.this,"Got Prefs",Toast.LENGTH_SHORT).show();
             String txtBio = sharedPreferences.getString("bio", "One");
             tvBio.setText(txtBio);
-
-
         }
         catch(Exception e){
 
@@ -118,6 +116,8 @@ public class ProfileActivity extends AppCompatActivity {
         SharedPreferences.Editor editor =sharedPreferences.edit();
         editor.putString("TEXT", tvName.getText().toString());
         editor.putString("bio", tvBio.getText().toString());
+
+
 
 //        editor.putString("Text", Text);
         editor.apply();
