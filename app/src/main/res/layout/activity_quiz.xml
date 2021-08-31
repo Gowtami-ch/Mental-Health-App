@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgapp"
+    android:background="@drawable/gradient_score"
     android:textAlignment="center"
     tools:context=".QuizActivity">
 
@@ -14,9 +14,17 @@
         android:layout_height="131dp"
         android:layout_marginTop="52dp"
         android:background="@drawable/bgquestion"
+        android:fontFamily="@font/adamina"
+        android:padding="15dp"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textColor="@color/dimgray"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
@@ -27,8 +35,11 @@
         android:id="@+id/next"
         android:layout_width="99dp"
         android:layout_height="48dp"
+        android:fontFamily="sans-serif"
         android:text="NEXT"
-        app:backgroundTint="#CF9116"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="#F43777"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.838"
@@ -48,40 +59,54 @@
         <RadioButton
             android:id="@+id/option1"
             android:layout_width="336dp"
-            android:layout_height="53dp" />
+            android:layout_height="53dp"
+            android:textColor="@color/darkslategray"
+            android:fontFamily="@font/adamina"/>
 
         <RadioButton
             android:id="@+id/option2"
             android:layout_width="336dp"
-            android:layout_height="53dp" />
+            android:layout_height="53dp"
+            android:textColor="@color/darkslategray"
+            android:fontFamily="@font/adamina"/>
 
         <RadioButton
             android:id="@+id/option3"
             android:layout_width="336dp"
-            android:layout_height="53dp" />
+            android:layout_height="53dp"
+            android:textColor="@color/darkslategray"
+            android:fontFamily="@font/adamina"/>
 
         <RadioButton
             android:id="@+id/option4"
             android:layout_width="336dp"
-            android:layout_height="53dp" />
+            android:layout_height="53dp"
+            android:textColor="@color/darkslategray"
+            android:fontFamily="@font/adamina"/>
 
         <RadioButton
             android:id="@+id/option5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkslategray"
+            android:fontFamily="@font/adamina"/>
     </RadioGroup>
 
     <Button
         android:id="@+id/clear"
         android:layout_width="99dp"
         android:layout_height="48dp"
+        android:fontFamily="sans-serif"
         android:text="CLEAR"
-        app:backgroundTint="#133270"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="#F43777"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/next"
-        app:layout_constraintHorizontal_bias="0.309"
+        app:layout_constraintHorizontal_bias="0.325"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.52" />
 
     <TextView
         android:id="@+id/notextview"
@@ -89,6 +114,7 @@
         android:layout_height="46dp"
         android:textAlignment="center"
         android:textStyle="bold"
+        android:fontFamily="@font/adamina"
         app:layout_constraintBottom_toTopOf="@+id/question"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
