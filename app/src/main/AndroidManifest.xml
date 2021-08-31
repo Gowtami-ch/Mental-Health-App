@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mentalhealthapp">
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -11,10 +12,12 @@
         android:roundIcon="@mipmap/mentalhealth_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalHealthApp">
+        <activity android:name=".screen5"></activity>
+        <activity android:name=".screen4" />
         <activity
-            android:name=".QuizStatistics"
+            android:name=".quizStatistics"
             android:exported="true"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".screen3"
             android:exported="true"
