@@ -43,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="17dp"
-                android:background="@color/plum"
+                android:background="@color/darkkhaki"
                 android:text="Credits @ D.P.Sahithi Rani Ch.Gowtami Githin George B.Roopa Sree BTech '23 Batch IITTP"
                 android:textAlignment="center"
                 android:textColor="@color/darkslategray"
