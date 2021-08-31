@@ -2,8 +2,8 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="@string/profile"
+    <item android:title="Explanation"
         android:icon="@drawable/ic_baseline_help_24"
         app:showAsAction="always"
-        android:id="@+id/Profile"/>
+        android:id="@+id/Explanation"/>
 </menu>

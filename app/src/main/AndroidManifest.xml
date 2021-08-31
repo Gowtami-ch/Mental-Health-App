@@ -15,8 +15,9 @@
         <activity android:name=".screen5"></activity>
         <activity android:name=".screen4" />
         <activity
-            android:name=".quizStatistics"
+            android:name=".QuizStatistics"
             android:exported="true"
+            android:label="Test Statistics"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".screen3"

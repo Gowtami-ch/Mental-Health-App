@@ -1,11 +1,16 @@
 package com.example.mentalhealthapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -23,7 +28,7 @@ public class ScoreActivity extends AppCompatActivity {
     QuizDetails quiz;
     QuizDatabase quizDb;
     TextView tvScore;
-
+    Dialog dialog;
 //    ProgressBar pbc1;
 //    ProgressBar pbc2;
 //    ProgressBar pbc3;
@@ -78,6 +83,7 @@ public class ScoreActivity extends AppCompatActivity {
         pbc7 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc7);
         pbc8 = (RoundedHorizontalProgressBar) findViewById(R.id.pbc8);
         tvScore=findViewById(R.id.txtScoreTotal);
+        dialog = new Dialog(ScoreActivity.this);
 
         int scp1=((int)sc1)*100/12;
         int scp2=((int)sc2*100/12),scp3=((int)sc3*100/12),scp4=((int)sc4*100/12),scp5=
@@ -148,6 +154,32 @@ public class ScoreActivity extends AppCompatActivity {
         }
         catch(Exception e){
             return -1;
+        }
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.explanation,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.Explanation:
+                Button btnClose;
+                dialog.setContentView(R.layout.score_description);
+                dialog.show();
+                btnClose = dialog.findViewById(R.id.close2);
+
+                btnClose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }
