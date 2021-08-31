@@ -19,6 +19,22 @@
         app:layout_constraintVertical_bias="0"
         app:srcCompat="@drawable/pinkbg" />
 
+    <TextView
+        android:layout_width="256dp"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif"
+        android:text="This app is the personal tool that helps keep track of your menatal health"
+        android:textAlignment="center"
+        android:textColor="@color/whitesmoke"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
         android:layout_width="wrap_content"
