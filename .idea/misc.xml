@@ -14,7 +14,7 @@
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_news.xml" value="0.1328125" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_profile.xml" value="0.1328125" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_to_do_list.xml" value="0.2" />
-        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_writing.xml" value="0.2" />
+        <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/activity_writing.xml" value="0.264" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/basic_item_layout.xml" value="0.1328125" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/basic_item_layout_journal_main.xml" value="0.264" />
         <entry key="..\:/Users/GITHIN GEORGE/Documents/Mental-Health-App-1/app/src/main/res/layout/basic_item_layout_to_do_list.xml" value="0.1328125" />
@@ -34,7 +34,7 @@
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_detailed.xml" value="0.1" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_details.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_journal.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_meme.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_news.xml" value="0.264" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_profile.xml" value="0.264" />
@@ -42,6 +42,9 @@
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_profile_edit.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_quiz.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_score.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_screen1.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_screen2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_screen3.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.24818840579710144" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/activity_to_do_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sahit/AndroidStudioProjects/MentalHealthApp/app/src/main/res/layout/custom_view.xml" value="0.25416666666666665" />
