@@ -1,6 +1,8 @@
 package com.example.mentalhealthapp;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -62,10 +64,20 @@ public class JournalPreviewAdapter extends RecyclerView.Adapter<JournalPreviewAd
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean b = db.deleteJournal(journalEntries.get(holder.getAdapterPosition()).getContent());
-                Toast.makeText(c,"delete = "+b,Toast.LENGTH_SHORT).show();
-                journalEntries.remove(holder.getAdapterPosition());
-                setJournalEntries(journalEntries);
+
+                new AlertDialog.Builder(c)
+                        .setIcon(android.R.drawable.ic_delete)
+                        .setTitle("Are you sure ?")
+                        .setMessage("Do you want to delete this item")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                boolean b = db.deleteJournal(journalEntries.get(holder.getAdapterPosition()).getContent());
+                                Toast.makeText(c,"delete = "+b,Toast.LENGTH_SHORT).show();
+                                journalEntries.remove(holder.getAdapterPosition());
+                                setJournalEntries(journalEntries);
+                            }
+                        }).setNegativeButton("No",null).show();
             }
         });
     }
