@@ -12,28 +12,45 @@
         android:roundIcon="@mipmap/mentalhealth_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalHealthApp">
-        <activity android:name=".screen5"></activity>
-        <activity android:name=".screen4" />
+
+        <activity android:name=".screen5"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false">
+
+        </activity>
+        <activity android:name=".screen4"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".QuizStatistics"
             android:exported="true"
             android:label="Test Statistics"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".screen3"
             android:exported="true"
-            android:parentActivityName=".IntroductoryActivity" />
+            android:parentActivityName=".IntroductoryActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".screen2"
             android:exported="true"
-            android:parentActivityName=".IntroductoryActivity" />
+            android:parentActivityName=".IntroductoryActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".screen1"
             android:exported="true"
-            android:parentActivityName=".IntroductoryActivity" />
+            android:parentActivityName=".IntroductoryActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".IntroductoryActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,64 +63,90 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".JournalView"
             android:exported="true"
-            android:parentActivityName=".JournalActivity" />
+            android:parentActivityName=".JournalActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".Detailed"
             android:exported="true"
-            android:parentActivityName=".NewsActivity" />
+            android:parentActivityName=".NewsActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".NewsActivity"
             android:exported="true"
             android:label="News"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".MemeActivity"
             android:exported="true"
             android:label="Memes"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".ProfileEditActivity"
             android:exported="true"
             android:label="Profile"
-            android:parentActivityName=".ProfileActivity" />
+            android:parentActivityName=".ProfileActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".Writing"
             android:exported="true"
             android:label="NewJournal"
-            android:parentActivityName=".JournalActivity" />
+            android:parentActivityName=".JournalActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".ToDoListActivity"
             android:exported="true"
             android:label="To-Do List"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".JournalActivity"
             android:exported="true"
             android:label="Emotion Journal"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".ScoreActivity"
             android:exported="true"
             android:label="Score"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".QuizActivity"
             android:exported="true"
             android:label="Quiz"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:parentActivityName=".IntroductoryActivity" />
+            android:parentActivityName=".IntroductoryActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
         <activity
             android:name=".CalendarActivity"
             android:exported="true"
             android:label="Calendar"
-            android:parentActivityName=".JournalActivity" />
+            android:parentActivityName=".JournalActivity"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false"/>
 
         <meta-data
             android:name="preloaded_fonts"
