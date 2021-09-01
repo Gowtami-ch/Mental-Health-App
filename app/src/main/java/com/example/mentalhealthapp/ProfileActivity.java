@@ -33,6 +33,8 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView tvName,tvBio;
     private ImageView image;
   //  public static final String SHARED_PREFS="sharedPrefs";
+
+    private String imageString;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +56,8 @@ public class ProfileActivity extends AppCompatActivity {
             Toast.makeText(ProfileActivity.this,"Got Prefs",Toast.LENGTH_SHORT).show();
             String txtBio = sharedPreferences.getString("bio", "One");
             tvBio.setText(txtBio);
+            imageString=sharedPreferences.getString("image","");
+            Glide.with(ProfileActivity.this).load(imageString).into(image);
         }
         catch(Exception e){
 
@@ -74,9 +78,9 @@ public class ProfileActivity extends AppCompatActivity {
                     public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK){
                             Intent data=result.getData();
-                            String str1 =data.getStringExtra(ProfileEditActivity.EXTRA_TEXT);
 
-                            Glide.with(ProfileActivity.this).load(str1).into(image);
+                            imageString=data.getStringExtra("image");
+                            Glide.with(ProfileActivity.this).load(imageString).into(image);
 
                             String Name = data.getStringExtra("Name");
                             String Bio = data.getStringExtra("Bio");
@@ -95,6 +99,7 @@ public class ProfileActivity extends AppCompatActivity {
                 Intent intent =new Intent(ProfileActivity.this,ProfileEditActivity.class);
                 intent.putExtra("Name",tvName.getText().toString());
                 intent.putExtra("Bio",tvBio.getText().toString());
+                intent.putExtra("image",imageString);
 
                 launchSomeActivity.launch(intent);
             }
@@ -114,16 +119,17 @@ public class ProfileActivity extends AppCompatActivity {
     public void finish(){
         SharedPreferences sharedPreferences=
                 PreferenceManager.getDefaultSharedPreferences(ProfileActivity.this);
-        SharedPreferences str1= getSharedPreferences(PREFS_NAME,0);
-        SharedPreferences.Editor editor1 = str1.edit();
-        editor1.putString("str1", String.valueOf(str1));
+//        SharedPreferences str1= getSharedPreferences(PREFS_NAME,0);
+//        SharedPreferences.Editor editor1 = str1.edit();
+//        editor1.putString("str1", String.valueOf(str1));
 
         SharedPreferences.Editor editor =sharedPreferences.edit();
         editor.putString("TEXT", tvName.getText().toString());
         editor.putString("bio", tvBio.getText().toString());
+        editor.putString("image",imageString);
 //        editor.putString("Text", Text);
         editor.apply();
-        editor1.commit();
+//        editor1.commit();
 
         Toast.makeText(ProfileActivity.this,"Finish Activity",Toast.LENGTH_SHORT).show();
 

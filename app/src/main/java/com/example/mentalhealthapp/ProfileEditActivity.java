@@ -63,6 +63,8 @@ public class ProfileEditActivity extends AppCompatActivity {
         image = findViewById(R.id.iv_cp);
         nName.setText(getIntent().getStringExtra("Name"));
         nBio.setText(getIntent().getStringExtra("Bio"));
+        text=getIntent().getStringExtra("image");
+        Glide.with(ProfileEditActivity.this).load(text).into(image);
 
         ActivityResultLauncher<Intent> launchSomeActivity = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -75,30 +77,30 @@ public class ProfileEditActivity extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
                             imageuri = result.getData().getData();
                             text=imageuri.toString();
-                            SharedPreferences text= getSharedPreferences(PREFS_NAME,0);
-                            str1 =text.getString("text", String.valueOf(text));
+//                            SharedPreferences text= getSharedPreferences(PREFS_NAME,0);
+//                            str1 =text.getString("text", String.valueOf(text));
 
                             //Glide.with(ProfileEditActivity.this).load(text).into(image)
                             Glide.with(ProfileEditActivity.this)
-                                  .load(str1).into(image);
-                            try {
-                                makeText(ProfileEditActivity.this, imageuri.toString(),
-                                        Toast.LENGTH_SHORT).show();
-                                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageuri);
-                               // File filepath= Environment.getExternalStorageDirectory();
-                               //  File dir= new File(filepath.getAbsolutePath()+"/Demo");
-                                // dir.mkdir();
-                                // File file = new File(dir,System.currentTimeMillis()+".jpg");
-                             //  // FileOutputStream outputStream = new FileOutputStream(file) ;
-                               // bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
-                              //  Toast.makeText(getApplicationContext(), "Image Saved To Internal !!!",Toast.LENGTH_SHORT).show();
-                               // outputStream.flush();
-                               // outputStream.close();
-                            } catch (FileNotFoundException e) {
-                                e.printStackTrace();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+                                  .load(text).into(image);
+//                            try {
+//                                makeText(ProfileEditActivity.this, imageuri.toString(),
+//                                        Toast.LENGTH_SHORT).show();
+//                                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageuri);
+//                               // File filepath= Environment.getExternalStorageDirectory();
+//                               //  File dir= new File(filepath.getAbsolutePath()+"/Demo");
+//                                // dir.mkdir();
+//                                // File file = new File(dir,System.currentTimeMillis()+".jpg");
+//                             //  // FileOutputStream outputStream = new FileOutputStream(file) ;
+//                               // bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
+//                              //  Toast.makeText(getApplicationContext(), "Image Saved To Internal !!!",Toast.LENGTH_SHORT).show();
+//                               // outputStream.flush();
+//                               // outputStream.close();
+//                            } catch (FileNotFoundException e) {
+//                                e.printStackTrace();
+//                            } catch (IOException e) {
+//                                e.printStackTrace();
+//                            }
                         }
                     }
                 });
@@ -132,7 +134,8 @@ public class ProfileEditActivity extends AppCompatActivity {
                 intent.putExtra("Name", Name);
                 intent.putExtra("Bio", Bio);
               //  intent.putExtra("image",R.drawable)
-                intent.putExtra(EXTRA_TEXT,str1);
+                intent.putExtra("image",text);
+//                intent.putExtra(EXTRA_TEXT,str1);
                 setResult(Activity.RESULT_OK, intent);
                 finish();
             }
