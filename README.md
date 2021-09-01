@@ -69,11 +69,4 @@ This will create a new directory named `Mental-Health-App`. To import the projec
 ### Memes
 > Humour is a well-known, effective coping strategy, and it enables to raise awareness of the society about issues that many would rather not speak about, including mental illness. Memes provide a safe space to deal with depression and anxiety. Our app provides a feature to watch some wholesome memes and share with friends or relatives. Sharing memes could allow users with depression and mental health conditions to form bonds with the others.
 
-### Screenshots
-<p>
-    <img src="assets/Text.png" height="500" width="1820"><br>
-    <img src="assets/Data Segment.png" height="400" width="1320"><br>
-    <img src="assets/Info_enable.png" height="400" width="1320"><br>
-    <img src="assets/Info_disable.png" height="400" width="1320"><br>
-</p>
 
