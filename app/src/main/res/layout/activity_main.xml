@@ -10,8 +10,8 @@
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="114dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,34 +21,26 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.cardview.widget.CardView
+        <TextView
+            android:id="@+id/textView12"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_margin="10dp">
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="17dp"
-                android:background="@color/darkkhaki"
-                android:text="Credits @ D.P.Sahithi Rani Ch.Gowtami Githin George B.Roopa Sree BTech '23 Batch IITTP"
-                android:textAlignment="center"
-                android:textColor="@color/darkslategray"
-                android:textSize="17sp" />
-        </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alike"
+            android:inputType="textMultiLine"
+            android:padding="12sp"
+            android:text="Credits @ D.P.Sahithi Rani, Ch.Gowtami, Githin George and B.Roopa Sree BTech '23 Batch IITTP"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
 
     </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

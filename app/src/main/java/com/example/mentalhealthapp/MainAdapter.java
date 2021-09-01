@@ -42,16 +42,16 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder>{
 
         switch(val){
             case 0:
-                holder.constraintLayout.setBackgroundColor(Color.parseColor("#FFA07A"));
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#F29849"));
                 break;
             case 1:
                 holder.constraintLayout.setBackgroundColor(Color.parseColor("#FF69B4"));
                 break;
             case 2:
-                holder.constraintLayout.setBackgroundColor(Color.parseColor("#9370DB"));
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#957DAD"));
                 break;
             case 3:
-                holder.constraintLayout.setBackgroundColor(Color.parseColor("#BDB76B"));
+                holder.constraintLayout.setBackgroundColor(Color.parseColor("#D9BD32"));
                 break;
             case 4:
                 holder.constraintLayout.setBackgroundColor(Color.parseColor("#5F9EA0"));
