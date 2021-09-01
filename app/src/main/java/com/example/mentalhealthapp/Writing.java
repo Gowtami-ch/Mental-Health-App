@@ -34,7 +34,7 @@ public class Writing extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Writing.this, "Save Btn Clicked", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(Writing.this, "Save Btn Clicked", Toast.LENGTH_SHORT).show();
                 int day, month, year;
                 DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
                 Date date = new Date();
