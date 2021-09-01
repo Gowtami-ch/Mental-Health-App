@@ -1,6 +1,8 @@
 package com.example.mentalhealthapp;
 import static android.widget.Toast.makeText;
 
+import static java.lang.System.load;
+
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -25,6 +27,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -41,10 +45,11 @@ public class ProfileEditActivity extends AppCompatActivity {
     public ImageView image;
     private static final int PICK_IMAGE = 1;
     Uri imageuri;
+    public String str1;
    // String str;
     // public String getString;
     public String Name, Bio, text;
-
+    public static final String PREFS_NAME= "MyPrefsFile";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +67,7 @@ public class ProfileEditActivity extends AppCompatActivity {
         ActivityResultLauncher<Intent> launchSomeActivity = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
+                    @SuppressLint("CheckResult")
                     @Override
                     public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == RESULT_OK) {
@@ -69,19 +75,25 @@ public class ProfileEditActivity extends AppCompatActivity {
                                     Toast.LENGTH_SHORT).show();
                             imageuri = result.getData().getData();
                             text=imageuri.toString();
+                            SharedPreferences text= getSharedPreferences(PREFS_NAME,0);
+                            str1 =text.getString("text", String.valueOf(text));
+
+                            //Glide.with(ProfileEditActivity.this).load(text).into(image)
+                            Glide.with(ProfileEditActivity.this)
+                                  .load(str1).into(image);
                             try {
                                 makeText(ProfileEditActivity.this, imageuri.toString(),
                                         Toast.LENGTH_SHORT).show();
                                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageuri);
-                                File filepath= Environment.getExternalStorageDirectory();
-                                 File dir= new File(filepath.getAbsolutePath()+"/Demo");
-                                 dir.mkdir();
-                                 File file = new File(dir,System.currentTimeMillis()+".jpg");
-                                FileOutputStream outputStream = new FileOutputStream(file) ;
-                                bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
-                                Toast.makeText(getApplicationContext(), "Image Saved To Internal !!!",Toast.LENGTH_SHORT).show();
-                                outputStream.flush();
-                                outputStream.close();
+                               // File filepath= Environment.getExternalStorageDirectory();
+                               //  File dir= new File(filepath.getAbsolutePath()+"/Demo");
+                                // dir.mkdir();
+                                // File file = new File(dir,System.currentTimeMillis()+".jpg");
+                             //  // FileOutputStream outputStream = new FileOutputStream(file) ;
+                               // bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream);
+                              //  Toast.makeText(getApplicationContext(), "Image Saved To Internal !!!",Toast.LENGTH_SHORT).show();
+                               // outputStream.flush();
+                               // outputStream.close();
                             } catch (FileNotFoundException e) {
                                 e.printStackTrace();
                             } catch (IOException e) {
@@ -114,13 +126,13 @@ public class ProfileEditActivity extends AppCompatActivity {
                 Bio = nBio.getText().toString();
 //                Text=nPassword.getText().toString();
 //
+
                 makeText(ProfileEditActivity.this, Name + " " + Bio, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ProfileEditActivity.this, ProfileActivity.class);
                 intent.putExtra("Name", Name);
                 intent.putExtra("Bio", Bio);
-                intent.putExtra(EXTRA_TEXT,text);
-               // intent.putExtra("str",imageuri.toString());
-//                intent.putExtra("Text",Text);
+              //  intent.putExtra("image",R.drawable)
+                intent.putExtra(EXTRA_TEXT,str1);
                 setResult(Activity.RESULT_OK, intent);
                 finish();
             }

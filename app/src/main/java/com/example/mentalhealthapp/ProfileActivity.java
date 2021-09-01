@@ -28,6 +28,7 @@ import java.io.IOException;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    public static final String PREFS_NAME= "MyPrefsFile";
     private Button btnEdit,btnBack;
     private TextView tvName,tvBio;
     private ImageView image;
@@ -73,15 +74,16 @@ public class ProfileActivity extends AppCompatActivity {
                     public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK){
                             Intent data=result.getData();
-                            String text =data.getStringExtra(ProfileEditActivity.EXTRA_TEXT);
+                            String str1 =data.getStringExtra(ProfileEditActivity.EXTRA_TEXT);
 
-                            Glide.with(ProfileActivity.this).load(text).into(image);
+                            Glide.with(ProfileActivity.this).load(str1).into(image);
 
                             String Name = data.getStringExtra("Name");
                             String Bio = data.getStringExtra("Bio");
-                           // String str = data.getStringExtra("str");
+                            //data.getStringExtra("text");
                             tvName.setText(String.valueOf(Name));
                             tvBio.setText(String.valueOf(Bio));
+
 
                         }
                     }
@@ -112,15 +114,16 @@ public class ProfileActivity extends AppCompatActivity {
     public void finish(){
         SharedPreferences sharedPreferences=
                 PreferenceManager.getDefaultSharedPreferences(ProfileActivity.this);
+        SharedPreferences str1= getSharedPreferences(PREFS_NAME,0);
+        SharedPreferences.Editor editor1 = str1.edit();
+        editor1.putString("str1", String.valueOf(str1));
 
         SharedPreferences.Editor editor =sharedPreferences.edit();
         editor.putString("TEXT", tvName.getText().toString());
         editor.putString("bio", tvBio.getText().toString());
-
-
-
 //        editor.putString("Text", Text);
         editor.apply();
+        editor1.commit();
 
         Toast.makeText(ProfileActivity.this,"Finish Activity",Toast.LENGTH_SHORT).show();
 
