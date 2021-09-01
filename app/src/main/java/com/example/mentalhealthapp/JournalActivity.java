@@ -34,7 +34,7 @@ public class JournalActivity extends AppCompatActivity {
         fabActJournal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(JournalActivity.this,"Go to Writing Activity",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(JournalActivity.this,"Go to Writing Activity",Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(JournalActivity.this,Writing.class);
                 startActivity(intent);
             }
@@ -44,7 +44,7 @@ public class JournalActivity extends AppCompatActivity {
         fabCalendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(JournalActivity.this,"Go to Calendar Activity",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(JournalActivity.this,"Go to Calendar Activity",Toast.LENGTH_SHORT).show();
                 Intent intent =new Intent(JournalActivity.this,CalendarActivity.class);
                 startActivity(intent);
             }

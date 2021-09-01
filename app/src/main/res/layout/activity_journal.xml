@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JournalActivity"
-    android:background="@drawable/img_blue">
+    android:background="@drawable/imgblue">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -26,7 +26,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:background="@drawable/gradient_card"
             android:clickable="true"
             android:contentDescription="Fab"
             app:backgroundTint="#E1C0C0"
@@ -51,7 +50,8 @@
             app:layout_constraintEnd_toStartOf="@+id/fabActJournal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/fabActJournal"
-            app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
+            app:srcCompat="@drawable/ic_baseline_calendar_today_24"
+            tools:ignore="VectorDrawableCompat" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
